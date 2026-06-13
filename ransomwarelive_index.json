@@ -1,0 +1,282 @@
+{
+  "project": "https://github.com/crocodyli/RansomDialect",
+  "description": "Behavioral negotiation profiles — links for ransomware.live integration. Slugs are best-effort; verify against live site before merge.",
+  "last_updated": "2026-06-13",
+  "groups": {
+    "akira": {
+      "ransomchats_name": "Akira",
+      "ransomwarelive_slug": "akira",
+      "chats": 60,
+      "negotiation_style": "corporativo-profissional",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/Akira.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/Akira.md",
+      "has_threatlabz": true,
+      "has_rtm": true,
+      "has_crocodyli_ttps": true
+    },
+    "lockbit3.0": {
+      "ransomchats_name": "lockbit3.0",
+      "ransomwarelive_slug": "lockbit3",
+      "chats": 42,
+      "negotiation_style": "terse-robotizado",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/lockbit3.0.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/lockbit3.0.md",
+      "has_threatlabz": true,
+      "has_rtm": true,
+      "has_crocodyli_ttps": true
+    },
+    "conti": {
+      "ransomchats_name": "Conti",
+      "ransomwarelive_slug": "conti",
+      "chats": 32,
+      "negotiation_style": "juridico-comercial",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/Conti.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/Conti.md",
+      "has_threatlabz": true,
+      "has_rtm": true,
+      "has_crocodyli_ttps": false
+    },
+    "revil": {
+      "ransomchats_name": "REvil",
+      "ransomwarelive_slug": "revil",
+      "chats": 20,
+      "negotiation_style": "frio-condescendente",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/REvil.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/REvil.md",
+      "has_threatlabz": true,
+      "has_rtm": true,
+      "has_crocodyli_ttps": false
+    },
+    "dragonforce": {
+      "ransomchats_name": "Dragonforce",
+      "ransomwarelive_slug": "dragonforce",
+      "chats": 14,
+      "negotiation_style": "direto-confiante",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/Dragonforce.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/Dragonforce.md",
+      "has_threatlabz": true,
+      "has_rtm": true,
+      "has_crocodyli_ttps": true
+    },
+    "trinity": {
+      "ransomchats_name": "trinity",
+      "ransomwarelive_slug": "trinity",
+      "chats": 14,
+      "negotiation_style": "minimalista-transacional",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/trinity.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/trinity.md",
+      "has_threatlabz": true,
+      "has_rtm": false,
+      "has_crocodyli_ttps": false
+    },
+    "hive": {
+      "ransomchats_name": "Hive",
+      "ransomwarelive_slug": "hive",
+      "chats": 8,
+      "negotiation_style": "supply-chain-formal",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/Hive.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/Hive.md",
+      "has_threatlabz": true,
+      "has_rtm": true,
+      "has_crocodyli_ttps": false
+    },
+    "avaddon": {
+      "ransomchats_name": "Avaddon",
+      "ransomwarelive_slug": "avaddon",
+      "chats": 7,
+      "negotiation_style": "sarcastico-agressivo",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/Avaddon.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/Avaddon.md",
+      "has_threatlabz": true,
+      "has_rtm": true,
+      "has_crocodyli_ttps": false
+    },
+    "nightspire": {
+      "ransomchats_name": "Nightspire",
+      "ransomwarelive_slug": "nightspire",
+      "chats": 7,
+      "negotiation_style": "osint-financeiro",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/Nightspire.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/Nightspire.md",
+      "has_threatlabz": true,
+      "has_rtm": true,
+      "has_crocodyli_ttps": false
+    },
+    "fog": {
+      "ransomchats_name": "fog",
+      "ransomwarelive_slug": "fog",
+      "chats": 6,
+      "negotiation_style": "casual-pragmatico",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/fog.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/fog.md",
+      "has_threatlabz": true,
+      "has_rtm": true,
+      "has_crocodyli_ttps": false
+    },
+    "blackbasta": {
+      "ransomchats_name": "BlackBasta",
+      "ransomwarelive_slug": "blackbasta",
+      "chats": 5,
+      "negotiation_style": "business-like",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/BlackBasta.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/BlackBasta.md",
+      "has_threatlabz": true,
+      "has_rtm": true,
+      "has_crocodyli_ttps": true
+    },
+    "darkside": {
+      "ransomchats_name": "Darkside",
+      "ransomwarelive_slug": "darkside",
+      "chats": 5,
+      "negotiation_style": "frio-intimidador",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/Darkside.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/Darkside.md",
+      "has_threatlabz": true,
+      "has_rtm": true,
+      "has_crocodyli_ttps": false
+    },
+    "mallox": {
+      "ransomchats_name": "Mallox",
+      "ransomwarelive_slug": "mallox",
+      "chats": 3,
+      "negotiation_style": "bot-humano",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/Mallox.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/Mallox.md",
+      "has_threatlabz": true,
+      "has_rtm": true,
+      "has_crocodyli_ttps": false
+    },
+    "babuk": {
+      "ransomchats_name": "Babuk",
+      "ransomwarelive_slug": "babuk",
+      "chats": 2,
+      "negotiation_style": "tecnico-ameacador",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/Babuk.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/Babuk.md",
+      "has_threatlabz": false,
+      "has_rtm": true,
+      "has_crocodyli_ttps": false
+    },
+    "blackmatter": {
+      "ransomchats_name": "BlackMatter",
+      "ransomwarelive_slug": "blackmatter",
+      "chats": 2,
+      "negotiation_style": "sarcastico-mascarado",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/BlackMatter.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/BlackMatter.md",
+      "has_threatlabz": true,
+      "has_rtm": true,
+      "has_crocodyli_ttps": false
+    },
+    "cloak": {
+      "ransomchats_name": "Cloak",
+      "ransomwarelive_slug": "cloak",
+      "chats": 2,
+      "negotiation_style": "procedural-burocratico",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/Cloak.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/Cloak.md",
+      "has_threatlabz": true,
+      "has_rtm": false,
+      "has_crocodyli_ttps": false
+    },
+    "noescape": {
+      "ransomchats_name": "NoEscape",
+      "ransomwarelive_slug": "noescape",
+      "chats": 2,
+      "negotiation_style": "formal-cortes",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/NoEscape.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/NoEscape.md",
+      "has_threatlabz": true,
+      "has_rtm": false,
+      "has_crocodyli_ttps": false
+    },
+    "qilin": {
+      "ransomchats_name": "Qilin",
+      "ransomwarelive_slug": "qilin",
+      "chats": 2,
+      "negotiation_style": "akira-like",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/Qilin.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/Qilin.md",
+      "has_threatlabz": true,
+      "has_rtm": true,
+      "has_crocodyli_ttps": false
+    },
+    "ranzy": {
+      "ransomchats_name": "Ranzy",
+      "ransomwarelive_slug": "ranzy",
+      "chats": 2,
+      "negotiation_style": "smash-and-grab",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/Ranzy.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/Ranzy.md",
+      "has_threatlabz": true,
+      "has_rtm": true,
+      "has_crocodyli_ttps": false
+    },
+    "avos": {
+      "ransomchats_name": "Avos",
+      "ransomwarelive_slug": "avoslocker",
+      "chats": 1,
+      "negotiation_style": "staff-affiliate-raas",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/Avos.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/Avos.md",
+      "has_threatlabz": true,
+      "has_rtm": true,
+      "has_crocodyli_ttps": false
+    },
+    "hunters": {
+      "ransomchats_name": "Hunters International",
+      "ransomwarelive_slug": "hunters",
+      "chats": 1,
+      "negotiation_style": "ultimato-puro",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/Hunters%20International.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/Hunters%20International.md",
+      "has_threatlabz": true,
+      "has_rtm": true,
+      "has_crocodyli_ttps": true
+    },
+    "mountlocker": {
+      "ransomchats_name": "mount-locker",
+      "ransomwarelive_slug": "mountlocker",
+      "chats": 1,
+      "negotiation_style": "legal-financeiro",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/mount-locker.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/mount-locker.md",
+      "has_threatlabz": false,
+      "has_rtm": true,
+      "has_crocodyli_ttps": false
+    },
+    "pear": {
+      "ransomchats_name": "Pear",
+      "ransomwarelive_slug": "pear",
+      "chats": 1,
+      "negotiation_style": "contrato-rigido",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/Pear.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/Pear.md",
+      "has_threatlabz": false,
+      "has_rtm": false,
+      "has_crocodyli_ttps": false
+    },
+    "ransomhub": {
+      "ransomchats_name": "RansomHub",
+      "ransomwarelive_slug": "ransomhub",
+      "chats": 1,
+      "negotiation_style": "faq-template",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/RansomHub.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/RansomHub.md",
+      "has_threatlabz": true,
+      "has_rtm": true,
+      "has_crocodyli_ttps": true
+    },
+    "runsomewares": {
+      "ransomchats_name": "RunSomeWares",
+      "ransomwarelive_slug": "runsomewares",
+      "chats": 1,
+      "negotiation_style": "pragmatico-cooperativo",
+      "profile_pt": "https://github.com/crocodyli/RansomDialect/blob/main/pt/RunSomeWares.md",
+      "profile_en": "https://github.com/crocodyli/RansomDialect/blob/main/en/RunSomeWares.md",
+      "has_threatlabz": false,
+      "has_rtm": false,
+      "has_crocodyli_ttps": false
+    }
+  }
+}
