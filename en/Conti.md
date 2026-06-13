@@ -123,4 +123,46 @@ Maturity:      Very High (2021–2022 era, group dismantled)
 
 ---
 
-*Source: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 32 chats analyzed*
+## Ransom Note (ThreatLabz)
+
+> Mapping for early attribution (T+0). Source: [ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes) — notes are **not** vendored here, only referenced.
+
+| Field | Detail |
+|-------|--------|
+| **ThreatLabz folder** | [`conti/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/conti) |
+| **Typical files** | `conti1.txt`, `conti2.txt`, `conti3.txt`, `conti4.txt` |
+| **Extension / artifact** | `.conti` |
+| **Key note phrases** | *"encrypted by CONTI strain"*, *"cannot be recovered... without contacting our team"*, *"we are businessmen"* |
+| **Chat continuity** | Initial legal note; chat expands contract, cyber insurance, and price ladder. |
+
+**If the note contains...** → confirms **Conti** before opening the negotiation portal.
+
+---
+
+## Pre-Extortion Artifacts (RTM)
+
+> Phase **T-7d → T-1h** — tools observed in intrusions leading to deployment. Source: [Ransomware-Tool-Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix) — **not** vendored here.
+
+| Field | Detail |
+|-------|--------|
+| **RTM GroupProfile** | — |
+| **Key tools** | `Mimikatz`, `ProcDump`, `Router Scan`, `SharpChrome`, `GMER`, `PCHunter`, `AdFind`, `Bloodhound`, `PowerView`, `Seatbelt` |
+| **Matrices** | [`CredentialTheft`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/CredentialTheft.md), [`DefenseEvasion`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/DefenseEvasion.md), [`DiscoveryEnum`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/DiscoveryEnum.md), [`Exfiltration`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Exfiltration.md), [`LOLBAS`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/LOLBAS.md), [`Offsec`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Offsec.md), [`RMM-Tools`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/RMM-Tools.md) |
+| **Hunt checklist** | [`RTM_ThreatHunt_Checklist.csv`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv) |
+| **Chat/note continuity** | Dropfiles/RClone in exfiltration; chat uses exfiltrated cyber insurance for pricing. |
+
+**If these artifacts appear in the environment** → strengthens **Conti** attribution alongside note and negotiation profile.
+
+---
+
+## MITRE Kill Chain (ThreatActors-TTPs)
+
+> External source: [crocodyli/ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs).
+
+| Field | Detail |
+|-------|--------|
+| **Status** | No matching folder (Jun 2026) |
+| **Alternative** | Use RTM matrices and negotiation profile in this repository |
+
+Index: [`operational_mapping.json`](../operational_mapping.json)
+*Source: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 32 chats analyzed* · Notas: [ThreatLabz](https://github.com/ThreatLabz/ransomware_notes) · Ops: [RTM](https://github.com/BushidoUK/Ransomware-Tool-Matrix) · [TTPs](https://github.com/crocodyli/ThreatActors-TTPs)

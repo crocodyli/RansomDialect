@@ -37,4 +37,46 @@ Flexibility: N/A | Pressure: High | Sophistication: Medium-High
 
 ---
 
-*Source: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 2 chats analyzed*
+## Ransom Note (ThreatLabz)
+
+> Mapping for early attribution (T+0). Source: [ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes) — notes are **not** vendored here, only referenced.
+
+| Field | Detail |
+|-------|--------|
+| **ThreatLabz folder** | [`qilin/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/qilin) |
+| **Typical files** | `README-RECOVER-[rand].txt`, `DtMXQFOCos-RECOVER-README.txt` |
+| **Extension / artifact** | `.qilin / .7z extension variants` |
+| **Key note phrases** | *"-- Qilin"*, *"Compromising and sensitive data"*, *"Employees p"* |
+| **Chat continuity** | Akira-like note style; chat offers 7 deliverables and tax-authority sale threat. |
+
+**If the note contains...** → confirms **Qilin** before opening the negotiation portal.
+
+---
+
+## Pre-Extortion Artifacts (RTM)
+
+> Phase **T-7d → T-1h** — tools observed in intrusions leading to deployment. Source: [Ransomware-Tool-Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix) — **not** vendored here.
+
+| Field | Detail |
+|-------|--------|
+| **RTM GroupProfile** | [`Qilin`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/GroupProfiles/Qilin.md) |
+| **Key tools** | `Nmap`, `ScreenConnect`, `EDRSandBlast`, `Mimikatz`, `Cobalt Strike`, `Proxychains`, `fsutil`, `EasyUpload`, `Nping`, `PCHunter` |
+| **Matrices** | [`CredentialTheft`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/CredentialTheft.md), [`DefenseEvasion`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/DefenseEvasion.md), [`DiscoveryEnum`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/DiscoveryEnum.md), [`Exfiltration`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Exfiltration.md), [`LOLBAS`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/LOLBAS.md), [`Networking`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Networking.md), [`Offsec`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Offsec.md), [`RMM-Tools`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/RMM-Tools.md) |
+| **Hunt checklist** | [`RTM_ThreatHunt_Checklist.csv`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv) |
+| **Chat/note continuity** | EasyUpload.io and RTM profile; Akira-like chat with 7 deliverables. |
+
+**If these artifacts appear in the environment** → strengthens **Qilin** attribution alongside note and negotiation profile.
+
+---
+
+## MITRE Kill Chain (ThreatActors-TTPs)
+
+> External source: [crocodyli/ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs).
+
+| Field | Detail |
+|-------|--------|
+| **Status** | No matching folder (Jun 2026) |
+| **Alternative** | Use RTM matrices and negotiation profile in this repository |
+
+Index: [`operational_mapping.json`](../operational_mapping.json)
+*Source: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 2 chats analyzed* · Notas: [ThreatLabz](https://github.com/ThreatLabz/ransomware_notes) · Ops: [RTM](https://github.com/BushidoUK/Ransomware-Tool-Matrix) · [TTPs](https://github.com/crocodyli/ThreatActors-TTPs)

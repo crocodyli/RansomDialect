@@ -37,4 +37,44 @@ Flexibility: Medium-High | Pressure: High | Sophistication: High
 
 ---
 
-*Source: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 2 chats analyzed*
+## Ransom Note (ThreatLabz)
+
+> Mapping for early attribution (T+0). External source: [ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes).
+
+| Field | Detail |
+|-------|--------|
+| **Status** | No matching ThreatLabz folder (verified Jun 2026) |
+| **Known artifact** | .babuk (conhecido em CTI; sem nota no ThreatLabz) |
+| **Alternative attribution** | No ThreatLabz entry — use *Technical support is ready* and insurance screening in chat. |
+
+See [`notes_mapping.json`](../notes_mapping.json) for the full index.
+
+---
+
+## Pre-Extortion Artifacts (RTM)
+
+> Phase **T-7d → T-1h** — tools observed in intrusions leading to deployment. Source: [Ransomware-Tool-Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix) — **not** vendored here.
+
+| Field | Detail |
+|-------|--------|
+| **RTM GroupProfile** | — |
+| **Key tools** | `File[.]io` |
+| **Matrices** | [`Exfiltration`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Exfiltration.md) |
+| **Hunt checklist** | [`RTM_ThreatHunt_Checklist.csv`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv) |
+| **Chat/note continuity** | Credential theft tools precede cyber insurance screening in chat. |
+
+**If these artifacts appear in the environment** → strengthens **Babuk** attribution alongside note and negotiation profile.
+
+---
+
+## MITRE Kill Chain (ThreatActors-TTPs)
+
+> External source: [crocodyli/ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs).
+
+| Field | Detail |
+|-------|--------|
+| **Status** | No matching folder (Jun 2026) |
+| **Alternative** | Use RTM matrices and negotiation profile in this repository |
+
+Index: [`operational_mapping.json`](../operational_mapping.json)
+*Source: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 2 chats analyzed* · Notas: [ThreatLabz](https://github.com/ThreatLabz/ransomware_notes) · Ops: [RTM](https://github.com/BushidoUK/Ransomware-Tool-Matrix) · [TTPs](https://github.com/crocodyli/ThreatActors-TTPs)

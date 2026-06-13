@@ -127,4 +127,51 @@ Maturity:      Very High (mature RaaS)
 
 ---
 
-*Source: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 42 chats analyzed*
+## Ransom Note (ThreatLabz)
+
+> Mapping for early attribution (T+0). Source: [ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes) — notes are **not** vendored here, only referenced.
+
+| Field | Detail |
+|-------|--------|
+| **ThreatLabz folder** | [`lockbit/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/lockbit) |
+| **Typical files** | `lockbit3.txt`, `[rand].README.txt`, `ReadMeForDecrypt.txt` |
+| **Extension / artifact** | `.lockbit3 / .abcd` |
+| **Key note phrases** | *"LockBit 3.0 the world's fastest"*, *"Your data is stolen and encrypted"*, *"TOR darknet sites"* |
+| **Chat continuity** | LockBit 3.0 branding note; chat reduces to *hello! pay for key!*. |
+
+**If the note contains...** → confirms **lockbit3.0** before opening the negotiation portal.
+
+---
+
+## Pre-Extortion Artifacts (RTM)
+
+> Phase **T-7d → T-1h** — tools observed in intrusions leading to deployment. Source: [Ransomware-Tool-Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix) — **not** vendored here.
+
+| Field | Detail |
+|-------|--------|
+| **RTM GroupProfile** | — |
+| **Key tools** | `Gosecretsdump`, `LaZagne`, `LostMyPassword`, `Mimikatz`, `NirSoft ExtPassword`, `PasswordFox`, `ProcDump`, `Veeam-Get-Creds`, `Backstab/Process Explorer driver (BYOVD)`, `Defender Control` |
+| **Matrices** | [`CredentialTheft`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/CredentialTheft.md), [`DefenseEvasion`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/DefenseEvasion.md), [`DiscoveryEnum`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/DiscoveryEnum.md), [`Exfiltration`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Exfiltration.md), [`LOLBAS`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/LOLBAS.md), [`Networking`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Networking.md), [`Offsec`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Offsec.md), [`RMM-Tools`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/RMM-Tools.md) |
+| **Hunt checklist** | [`RTM_ThreatHunt_Checklist.csv`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv) |
+| **Chat/note continuity** | Massive Cobalt Strike/RMM; chat reduces to *hello! pay for key!*. |
+
+**If these artifacts appear in the environment** → strengthens **lockbit3.0** attribution alongside note and negotiation profile.
+
+---
+
+## MITRE Kill Chain (ThreatActors-TTPs)
+
+> Pre-extortion TTPs, CVEs, and history. Source: [crocodyli/ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs) — **not** vendored here.
+
+| Field | Detail |
+|-------|--------|
+| **Folder** | [`LockBit/`](https://github.com/crocodyli/ThreatActors-TTPs/tree/main/LockBit) |
+| **TTPs (MITRE)** | [`LockBit-TTP`](https://github.com/crocodyli/ThreatActors-TTPs/blob/main/LockBit/LockBit-TTP.md) |
+| **CVEs** | — |
+| **Key TTPs** | *T1190 — Exploração massiva de CVEs (Fortinet, Exchange, etc.)*; *T1219 — RMM e Cobalt Strike no precursor*; *T1486 — LockBit 3.0 builder / afiliados* |
+
+Cross-reference with [ransomware.live](https://www.ransomware.live/) and RTM matrix.
+
+---
+
+*Source: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 42 chats analyzed* · Notas: [ThreatLabz](https://github.com/ThreatLabz/ransomware_notes) · Ops: [RTM](https://github.com/BushidoUK/Ransomware-Tool-Matrix) · [TTPs](https://github.com/crocodyli/ThreatActors-TTPs)

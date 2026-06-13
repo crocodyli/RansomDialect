@@ -38,4 +38,51 @@ Flexibility: Very Low | Pressure: High | Sophistication: Medium
 
 ---
 
-*Source: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 1 chats analyzed*
+## Ransom Note (ThreatLabz)
+
+> Mapping for early attribution (T+0). Source: [ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes) — notes are **not** vendored here, only referenced.
+
+| Field | Detail |
+|-------|--------|
+| **ThreatLabz folder** | [`hunters/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/hunters) |
+| **Typical files** | `READ ME NOW!.txt`, `Contact Us.txt`, `Contact Us2.txt` |
+| **Extension / artifact** | `.hunters (variantes)` |
+| **Key note phrases** | *"HUNTERS INTERNATIONAL group"*, *"military-grade AES"*, *"large amount of sensitive data was exfiltrated"* |
+| **Chat continuity** | Ultimatum note; chat confirms inflexibility (*I'm okay to get nothing*). |
+
+**If the note contains...** → confirms **Hunters International** before opening the negotiation portal.
+
+---
+
+## Pre-Extortion Artifacts (RTM)
+
+> Phase **T-7d → T-1h** — tools observed in intrusions leading to deployment. Source: [Ransomware-Tool-Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix) — **not** vendored here.
+
+| Field | Detail |
+|-------|--------|
+| **RTM GroupProfile** | — |
+| **Key tools** | `Advanced IP Scanner`, `Advanced Port Scanner`, `RClone`, `WinSCP` |
+| **Matrices** | [`DiscoveryEnum`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/DiscoveryEnum.md), [`Exfiltration`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Exfiltration.md) |
+| **Hunt checklist** | [`RTM_ThreatHunt_Checklist.csv`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv) |
+| **Chat/note continuity** | Ultimatum operation from intrusion; chat confirms total inflexibility. |
+
+**If these artifacts appear in the environment** → strengthens **Hunters International** attribution alongside note and negotiation profile.
+
+---
+
+## MITRE Kill Chain (ThreatActors-TTPs)
+
+> Pre-extortion TTPs, CVEs, and history. Source: [crocodyli/ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs) — **not** vendored here.
+
+| Field | Detail |
+|-------|--------|
+| **Folder** | [`Hunters International/`](https://github.com/crocodyli/ThreatActors-TTPs/tree/main/Hunters%20International) |
+| **TTPs (MITRE)** | [`Hunters International-TTP`](https://github.com/crocodyli/ThreatActors-TTPs/blob/main/Hunters%20International/Hunters%20International-TTP.md) |
+| **CVEs** | — |
+| **Key TTPs** | *T1190 — Acesso inicial via serviços expostos*; *T1486 — AES + double extortion*; *T1490 — Inibição de recovery/backup* |
+
+Cross-reference with [ransomware.live](https://www.ransomware.live/) and RTM matrix.
+
+---
+
+*Source: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 1 chats analyzed* · Notas: [ThreatLabz](https://github.com/ThreatLabz/ransomware_notes) · Ops: [RTM](https://github.com/BushidoUK/Ransomware-Tool-Matrix) · [TTPs](https://github.com/crocodyli/ThreatActors-TTPs)

@@ -37,4 +37,46 @@ Flexibility: Medium | Pressure: Very High | Sophistication: Medium-High
 
 ---
 
-*Source: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 7 chats analyzed*
+## Ransom Note (ThreatLabz)
+
+> Mapping for early attribution (T+0). Source: [ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes) — notes are **not** vendored here, only referenced.
+
+| Field | Detail |
+|-------|--------|
+| **ThreatLabz folder** | [`nightspire/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/nightspire) |
+| **Typical files** | `nightspire_readme.txt`, `[NSPIRE_MSG].txt`, `readme.txt` |
+| **Extension / artifact** | `.nspire / .nightspire` |
+| **Key note phrases** | *"sensetive data are stolen and encrypted"*, *"pay within 3 days"*, *"DO NOT USE THIRD PARTY SOFTWARE"* |
+| **Chat continuity** | 3-day deadline note; chat escalates with 10-K filing OSINT and FBI mentions. |
+
+**If the note contains...** → confirms **Nightspire** before opening the negotiation portal.
+
+---
+
+## Pre-Extortion Artifacts (RTM)
+
+> Phase **T-7d → T-1h** — tools observed in intrusions leading to deployment. Source: [Ransomware-Tool-Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix) — **not** vendored here.
+
+| Field | Detail |
+|-------|--------|
+| **RTM GroupProfile** | — |
+| **Key tools** | `Everything.exe`, `MEGA`, `WinSCP` |
+| **Matrices** | [`DiscoveryEnum`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/DiscoveryEnum.md), [`Exfiltration`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Exfiltration.md) |
+| **Hunt checklist** | [`RTM_ThreatHunt_Checklist.csv`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv) |
+| **Chat/note continuity** | Pre-lock exfiltration; chat escalates with 10-K filing OSINT. |
+
+**If these artifacts appear in the environment** → strengthens **Nightspire** attribution alongside note and negotiation profile.
+
+---
+
+## MITRE Kill Chain (ThreatActors-TTPs)
+
+> External source: [crocodyli/ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs).
+
+| Field | Detail |
+|-------|--------|
+| **Status** | No matching folder (Jun 2026) |
+| **Alternative** | Use RTM matrices and negotiation profile in this repository |
+
+Index: [`operational_mapping.json`](../operational_mapping.json)
+*Source: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 7 chats analyzed* · Notas: [ThreatLabz](https://github.com/ThreatLabz/ransomware_notes) · Ops: [RTM](https://github.com/BushidoUK/Ransomware-Tool-Matrix) · [TTPs](https://github.com/crocodyli/ThreatActors-TTPs)

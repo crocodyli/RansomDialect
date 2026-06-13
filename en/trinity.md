@@ -37,4 +37,43 @@ Flexibility: None | Pressure: Low | Sophistication: Low
 
 ---
 
-*Source: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 14 chats analyzed*
+## Ransom Note (ThreatLabz)
+
+> Mapping for early attribution (T+0). Source: [ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes) — notes are **not** vendored here, only referenced.
+
+| Field | Detail |
+|-------|--------|
+| **ThreatLabz folder** | [`trinity/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/trinity) |
+| **Typical files** | `README.txt` |
+| **Extension / artifact** | `.trinitylocker` |
+| **Key note phrases** | *"TRINITY LOCKER"*, *"helpdesk101@onionmail.com"*, *"download TOR"* |
+| **Chat continuity** | Tor/email portal note; chat charges 0.25 BTC per endpoint with no flexibility. |
+
+**If the note contains...** → confirms **trinity** before opening the negotiation portal.
+
+---
+
+## Pre-Extortion Artifacts (RTM)
+
+> Phase **T-7d → T-1h** — hunt/IR during crisis. Source: [Ransomware-Tool-Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix).
+
+| Field | Detail |
+|-------|--------|
+| **Status** | No dedicated RTM entry (Jun 2026) |
+| **General checklist** | [`RTM_ThreatHunt_Checklist.csv`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv) |
+| **Chat/note continuity** | Operational minimalism; per-endpoint pricing chat with no flexibility. |
+
+Index: [`operational_mapping.json`](../operational_mapping.json)
+---
+
+## MITRE Kill Chain (ThreatActors-TTPs)
+
+> External source: [crocodyli/ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs).
+
+| Field | Detail |
+|-------|--------|
+| **Status** | No matching folder (Jun 2026) |
+| **Alternative** | Use RTM matrices and negotiation profile in this repository |
+
+Index: [`operational_mapping.json`](../operational_mapping.json)
+*Source: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 14 chats analyzed* · Notas: [ThreatLabz](https://github.com/ThreatLabz/ransomware_notes) · Ops: [RTM](https://github.com/BushidoUK/Ransomware-Tool-Matrix) · [TTPs](https://github.com/crocodyli/ThreatActors-TTPs)
