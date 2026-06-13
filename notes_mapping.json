@@ -1,0 +1,286 @@
+{
+  "source": {
+    "repository": "https://github.com/ThreatLabz/ransomware_notes",
+    "maintainer": "Zscaler ThreatLabz",
+    "license": "See upstream repository",
+    "description": "Archive of ransomware ransom notes — mapped to Ransomchats actors for early attribution (T+0). Notes are not vendored; links only.",
+    "last_verified": "2026-06-13"
+  },
+  "actors": {
+    "Akira": {
+      "threatlabz_folder": "akira",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/akira",
+      "typical_files": ["akira_readme.txt", "akira_readme_2.txt", "akira_readme_3.txt"],
+      "extension_or_artifact": ".akira",
+      "note_phrases_pt": ["surprise information security audit", "internal infrastructure... fully or partially dead", "backups... completely removed"],
+      "note_phrases_en": ["surprise information security audit", "internal infrastructure... fully or partially dead", "backups... completely removed"],
+      "chat_continuity_pt": "Mesma persona de suporte técnico; a nota anuncia exfiltração e destruição de backups antes do portal de chat.",
+      "chat_continuity_en": "Same technical-support persona; the note announces exfiltration and backup destruction before the chat portal.",
+      "status": "mapped"
+    },
+    "Avaddon": {
+      "threatlabz_folder": "avaddon",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/avaddon",
+      "typical_files": ["avaddon.txt"],
+      "extension_or_artifact": "{{ext}} (variável por campanha)",
+      "note_phrases_pt": ["Your network has been infected!", "DO NOT DELETE THIS FILE", "General Decryptor"],
+      "note_phrases_en": ["Your network has been infected!", "DO NOT DELETE THIS FILE", "General Decryptor"],
+      "chat_continuity_pt": "Tom agressivo da nota evolui para sarcasmo e *Tick tock* no chat.",
+      "chat_continuity_en": "Aggressive note tone escalates to sarcasm and *Tick tock* in chat.",
+      "status": "mapped"
+    },
+    "Avos": {
+      "threatlabz_folder": "avoslocker",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/avoslocker",
+      "typical_files": ["avoslocker.txt"],
+      "extension_or_artifact": ".avos / .avos2",
+      "note_phrases_pt": ["Your files have been encrypted", "do not shutting down your computer", "decryption key & application"],
+      "note_phrases_en": ["Your files have been encrypted", "do not shutting down your computer", "decryption key & application"],
+      "chat_continuity_pt": "Nota formal de AvosLocker; chat separa Staff central e affiliate RaaS.",
+      "chat_continuity_en": "Formal AvosLocker note; chat separates central Staff and RaaS affiliate.",
+      "status": "mapped"
+    },
+    "Babuk": {
+      "threatlabz_folder": null,
+      "threatlabz_url": null,
+      "typical_files": [],
+      "extension_or_artifact": ".babuk (conhecido em CTI; sem nota no ThreatLabz)",
+      "note_phrases_pt": [],
+      "note_phrases_en": [],
+      "chat_continuity_pt": "Sem entrada no ThreatLabz — use *Technical support is ready* e perguntas sobre seguro no chat.",
+      "chat_continuity_en": "No ThreatLabz entry — use *Technical support is ready* and insurance screening in chat.",
+      "status": "not_in_threatlabz"
+    },
+    "BlackBasta": {
+      "threatlabz_folder": "blackbasta",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/blackbasta",
+      "typical_files": ["blackbasta1.txt", "blackbasta2.txt", "instructions_read_me.txt"],
+      "extension_or_artifact": ".basta",
+      "note_phrases_pt": ["Your data are stolen and encrypted", "company id for log in", "decrypt one file for free"],
+      "note_phrases_en": ["Your data are stolen and encrypted", "company id for log in", "decrypt one file for free"],
+      "chat_continuity_pt": "Nota direta sobre portal Tor; chat adota framing *businessman* e piso ~$150K.",
+      "chat_continuity_en": "Direct Tor portal note; chat adopts *businessman* framing and ~$150K floor.",
+      "status": "mapped"
+    },
+    "BlackMatter": {
+      "threatlabz_folder": "blackmatter",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/blackmatter",
+      "typical_files": ["blackmatter.txt"],
+      "extension_or_artifact": ".blackmatter / .pay2key",
+      "note_phrases_pt": ["BLACK ... Matter", "How may I help you?", "universal decryptor"],
+      "note_phrases_en": ["BLACK ... Matter", "How may I help you?", "universal decryptor"],
+      "chat_continuity_pt": "Arte ASCII da nota; chat mantém sarcasmo e conhecimento de infra em tempo real.",
+      "chat_continuity_en": "ASCII art in note; chat keeps sarcasm and real-time infra awareness.",
+      "status": "mapped"
+    },
+    "Cloak": {
+      "threatlabz_folder": "cloak",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/cloak",
+      "typical_files": ["readme_for_unlock.txt", "readme_for_unlock_oct2024.txt", "readme_for_unlock_nov2024.txt"],
+      "extension_or_artifact": ".cloak / .pwned",
+      "note_phrases_pt": ["ATTENTION", "network is hacked and files are encrypted", "accounting and other internal documentation"],
+      "note_phrases_en": ["ATTENTION", "network is hacked and files are encrypted", "accounting and other internal documentation"],
+      "chat_continuity_pt": "Nota lista exfiltração; chat impõe 6 regras + 11 passos antes do preço.",
+      "chat_continuity_en": "Note lists exfiltration; chat enforces 6 rules + 11 steps before pricing.",
+      "status": "mapped"
+    },
+    "Conti": {
+      "threatlabz_folder": "conti",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/conti",
+      "typical_files": ["conti1.txt", "conti2.txt", "conti3.txt", "conti4.txt"],
+      "extension_or_artifact": ".conti",
+      "note_phrases_pt": ["encrypted by CONTI strain", "cannot be recovered... without contacting our team", "we are businessmen"],
+      "note_phrases_en": ["encrypted by CONTI strain", "cannot be recovered... without contacting our team", "we are businessmen"],
+      "chat_continuity_pt": "Nota jurídica inicial; chat expande contrato, seguro cyber e escada de preços.",
+      "chat_continuity_en": "Initial legal note; chat expands contract, cyber insurance, and price ladder.",
+      "status": "mapped"
+    },
+    "Darkside": {
+      "threatlabz_folder": "darkside",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/darkside",
+      "typical_files": ["darkside.txt"],
+      "extension_or_artifact": ".darkside",
+      "note_phrases_pt": ["Welcome to DarkSide", "universal decryptor", "backups are deleted"],
+      "note_phrases_en": ["Welcome to DarkSide", "universal decryptor", "backups are deleted"],
+      "chat_continuity_pt": "Nota fria e direta; chat escala com OSINT financeiro e ameaças à imprensa.",
+      "chat_continuity_en": "Cold direct note; chat escalates with financial OSINT and media threats.",
+      "status": "mapped"
+    },
+    "Dragonforce": {
+      "threatlabz_folder": "dragonforce",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/dragonforce",
+      "typical_files": ["[rand].README.txt", "readme.xt"],
+      "extension_or_artifact": ".dragonforce",
+      "note_phrases_pt": ["files have been stolen... and encrypted", "We work for money", "communication process:"],
+      "note_phrases_en": ["files have been stolen... and encrypted", "We work for money", "communication process:"],
+      "chat_continuity_pt": "Nota estruturada em passos; chat ancora em BTC com timer de 2 semanas.",
+      "chat_continuity_en": "Structured step-based note; chat anchors on BTC with 2-week timer.",
+      "status": "mapped"
+    },
+    "fog": {
+      "threatlabz_folder": "fog",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/fog",
+      "typical_files": ["readme.txt", "readme2.txt"],
+      "extension_or_artifact": ".fog",
+      "note_phrases_pt": ["We call ourselves Fog", "victim of a cyber attack", "The sooner you contact us"],
+      "note_phrases_en": ["We call ourselves Fog", "victim of a cyber attack", "The sooner you contact us"],
+      "chat_continuity_pt": "Nota minimalista com identidade Fog; chat mantém abertura *hi* e delegação aos *bosses*.",
+      "chat_continuity_en": "Minimal note with Fog identity; chat keeps *hi* opening and *bosses* delegation.",
+      "status": "mapped"
+    },
+    "Hive": {
+      "threatlabz_folder": "hive",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/hive",
+      "typical_files": ["HOW_TO_DECRYPT.txt", "hive.txt"],
+      "extension_or_artifact": ".hive",
+      "note_phrases_pt": ["network has been breached", "hiveleak... onion", "purchase our decryption software"],
+      "note_phrases_en": ["network has been breached", "hiveleak... onion", "purchase our decryption software"],
+      "chat_continuity_pt": "Nota padrão de leak site; chat formal *How may I help you?* com recusa a SMBs downstream.",
+      "chat_continuity_en": "Standard leak-site note; formal *How may I help you?* chat refusing downstream SMBs.",
+      "status": "mapped"
+    },
+    "Hunters International": {
+      "threatlabz_folder": "hunters",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/hunters",
+      "typical_files": ["READ ME NOW!.txt", "Contact Us.txt", "Contact Us2.txt"],
+      "extension_or_artifact": ".hunters (variantes)",
+      "note_phrases_pt": ["HUNTERS INTERNATIONAL group", "military-grade AES", "large amount of sensitive data was exfiltrated"],
+      "note_phrases_en": ["HUNTERS INTERNATIONAL group", "military-grade AES", "large amount of sensitive data was exfiltrated"],
+      "chat_continuity_pt": "Nota ultimato; chat confirma inflexibilidade (*I'm okay to get nothing*).",
+      "chat_continuity_en": "Ultimatum note; chat confirms inflexibility (*I'm okay to get nothing*).",
+      "status": "mapped"
+    },
+    "lockbit3.0": {
+      "threatlabz_folder": "lockbit",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/lockbit",
+      "typical_files": ["lockbit3.txt", "[rand].README.txt", "ReadMeForDecrypt.txt"],
+      "extension_or_artifact": ".lockbit3 / .abcd",
+      "note_phrases_pt": ["LockBit 3.0 the world's fastest", "Your data is stolen and encrypted", "TOR darknet sites"],
+      "note_phrases_en": ["LockBit 3.0 the world's fastest", "Your data is stolen and encrypted", "TOR darknet sites"],
+      "chat_continuity_pt": "Nota branding LockBit 3.0; chat reduz tudo a *hello! pay for key!*.",
+      "chat_continuity_en": "LockBit 3.0 branding note; chat reduces to *hello! pay for key!*.",
+      "status": "mapped"
+    },
+    "Mallox": {
+      "threatlabz_folder": "mallox",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/mallox",
+      "typical_files": ["FILE RECOVERY.txt", "HOW TO BACK FILES.txt"],
+      "extension_or_artifact": ".mallox / .ma1x0",
+      "note_phrases_pt": ["files are encrypted and can not be used", "decrypt one file for free", "Do not try to change or restore files yourself"],
+      "note_phrases_en": ["files are encrypted and can not be used", "decrypt one file for free", "Do not try to change or restore files yourself"],
+      "chat_continuity_pt": "Nota oferece test decrypt no site; chat usa BOT com desconto % automático.",
+      "chat_continuity_en": "Note offers site test decrypt; chat uses BOT with automatic % discount.",
+      "status": "mapped"
+    },
+    "mount-locker": {
+      "threatlabz_folder": null,
+      "threatlabz_url": null,
+      "typical_files": [],
+      "extension_or_artifact": ".mount-locker (conhecido em CTI; sem nota no ThreatLabz)",
+      "note_phrases_pt": [],
+      "note_phrases_en": [],
+      "chat_continuity_pt": "Sem entrada no ThreatLabz — use framework legal e *Greetings! We are ready to help you!* no chat.",
+      "chat_continuity_en": "No ThreatLabz entry — use legal framework and *Greetings! We are ready to help you!* in chat.",
+      "status": "not_in_threatlabz"
+    },
+    "Nightspire": {
+      "threatlabz_folder": "nightspire",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/nightspire",
+      "typical_files": ["nightspire_readme.txt", "[NSPIRE_MSG].txt", "readme.txt"],
+      "extension_or_artifact": ".nspire / .nightspire",
+      "note_phrases_pt": ["sensetive data are stolen and encrypted", "pay within 3 days", "DO NOT USE THIRD PARTY SOFTWARE"],
+      "note_phrases_en": ["sensetive data are stolen and encrypted", "pay within 3 days", "DO NOT USE THIRD PARTY SOFTWARE"],
+      "chat_continuity_pt": "Nota com prazo 3 dias; chat escala com OSINT de filings 10-K e menção a FBI.",
+      "chat_continuity_en": "3-day deadline note; chat escalates with 10-K filing OSINT and FBI mentions.",
+      "status": "mapped"
+    },
+    "NoEscape": {
+      "threatlabz_folder": "noescape",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/noescape",
+      "typical_files": ["HOW_TO_RECOVER_FILES.txt", "HOW_TO_RECOVER_FILES_no_personal_id.txt"],
+      "extension_or_artifact": ".noescape",
+      "note_phrases_pt": ["HOW TO RECOVER FILES", "personal id", "DO NOT MODIFY FILES"],
+      "note_phrases_en": ["HOW TO RECOVER FILES", "personal id", "DO NOT MODIFY FILES"],
+      "chat_continuity_pt": "Nota formal com ID pessoal; chat polido com test decrypt via portal.",
+      "chat_continuity_en": "Formal note with personal ID; polished chat with portal test decrypt.",
+      "status": "mapped"
+    },
+    "Pear": {
+      "threatlabz_folder": null,
+      "threatlabz_url": null,
+      "typical_files": [],
+      "extension_or_artifact": ".pear (conhecido em CTI; sem nota no ThreatLabz)",
+      "note_phrases_pt": [],
+      "note_phrases_en": [],
+      "chat_continuity_pt": "Sem entrada no ThreatLabz — use condições numeradas (a–e) e *non-negotiable* no chat.",
+      "chat_continuity_en": "No ThreatLabz entry — use numbered conditions (a–e) and *non-negotiable* in chat.",
+      "status": "not_in_threatlabz"
+    },
+    "Qilin": {
+      "threatlabz_folder": "qilin",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/qilin",
+      "typical_files": ["README-RECOVER-[rand].txt", "DtMXQFOCos-RECOVER-README.txt"],
+      "extension_or_artifact": ".qilin / .7z extension variants",
+      "note_phrases_pt": ["-- Qilin", "Compromising and sensitive data", "Employees p"],
+      "note_phrases_en": ["-- Qilin", "Compromising and sensitive data", "Employees p"],
+      "chat_continuity_pt": "Nota estilo Akira-like; chat oferece 7 entregáveis e ameaça venda a fisco.",
+      "chat_continuity_en": "Akira-like note style; chat offers 7 deliverables and tax-authority sale threat.",
+      "status": "mapped"
+    },
+    "RansomHub": {
+      "threatlabz_folder": "ransomhub",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/ransomhub",
+      "typical_files": ["readme_[id].txt", "readme_[id]_2.txt"],
+      "extension_or_artifact": ".ransomhub",
+      "note_phrases_pt": ["Visit our Blog", "Your data is stolen and encrypted", "TOR darknet"],
+      "note_phrases_en": ["Visit our Blog", "Your data is stolen and encrypted", "TOR darknet"],
+      "chat_continuity_pt": "Nota é FAQ template; único chat capturado também é template automatizado.",
+      "chat_continuity_en": "Note is FAQ template; only captured chat is also automated template.",
+      "status": "mapped"
+    },
+    "Ranzy": {
+      "threatlabz_folder": "ranzy",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/ranzy",
+      "typical_files": ["ranzy.txt"],
+      "extension_or_artifact": ".ranzy",
+      "note_phrases_pt": ["Your servers is LOCKED", "eviluser@tutanota.com", "personal id:"],
+      "note_phrases_en": ["Your servers is LOCKED", "eviluser@tutanota.com", "personal id:"],
+      "chat_continuity_pt": "Nota minimalista por e-mail; chat confirma preço fixo $7K sem double extortion.",
+      "chat_continuity_en": "Minimal email-based note; chat confirms fixed $7K price without double extortion.",
+      "status": "mapped"
+    },
+    "REvil": {
+      "threatlabz_folder": "revil",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/revil",
+      "typical_files": ["revil1.txt", "revil2.txt", "revil3.txt"],
+      "extension_or_artifact": "{EXT} (variável por campanha)",
+      "note_phrases_pt": ["Welcome. Again.", "What guarantees?", "NEVER restore without instructions"],
+      "note_phrases_en": ["Welcome. Again.", "What guarantees?", "NEVER restore without instructions"],
+      "chat_continuity_pt": "Nota estruturada em FAQ; chat torna-se condescendente e refuta com docs roubados.",
+      "chat_continuity_en": "FAQ-structured note; chat becomes condescending and refutes with stolen docs.",
+      "status": "mapped"
+    },
+    "RunSomeWares": {
+      "threatlabz_folder": null,
+      "threatlabz_url": null,
+      "typical_files": [],
+      "extension_or_artifact": ".RSW (conhecido em CTI; sem nota no ThreatLabz)",
+      "note_phrases_pt": [],
+      "note_phrases_en": [],
+      "chat_continuity_pt": "Sem entrada no ThreatLabz — use *We analized the company's revenue* e tom cooperativo no chat.",
+      "chat_continuity_en": "No ThreatLabz entry — use *We analized the company's revenue* and cooperative tone in chat.",
+      "status": "not_in_threatlabz"
+    },
+    "trinity": {
+      "threatlabz_folder": "trinity",
+      "threatlabz_url": "https://github.com/ThreatLabz/ransomware_notes/tree/main/trinity",
+      "typical_files": ["README.txt"],
+      "extension_or_artifact": ".trinitylocker",
+      "note_phrases_pt": ["TRINITY LOCKER", "helpdesk101@onionmail.com", "download TOR"],
+      "note_phrases_en": ["TRINITY LOCKER", "helpdesk101@onionmail.com", "download TOR"],
+      "chat_continuity_pt": "Nota com portal Tor/e-mail; chat cobra 0,25 BTC por endpoint sem flexibilidade.",
+      "chat_continuity_en": "Tor/email portal note; chat charges 0.25 BTC per endpoint with no flexibility.",
+      "status": "mapped"
+    }
+  }
+}
