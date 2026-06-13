@@ -1,6 +1,7 @@
 # Ransomware Negotiation Profile Mapping
 
-> **CTI analysis** — Behavioral profiles of 25 ransomware groups based on 241 real negotiations (~11,473 messages) from the [Ransomchats](https://github.com/Casualtek/Ransomchats) dataset.
+> **CTI analysis** — Behavioral profiles of 25 ransomware groups based on 241 real negotiations (~11,473 messages) from the [Ransomchats](https://github.com/Casualtek/Ransomchats) dataset, with [ThreatLabz](https://github.com/ThreatLabz/ransomware_notes) (T+0), [RTM](https://github.com/BushidoUK/Ransomware-Tool-Matrix) and [ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs) (T-7d→T-1h) cross-references.  
+> Portuguese version: [`pt/00-VISAO-GERAL.md`](../pt/00-VISAO-GERAL.md) · Sources: [`SOURCES.md`](../SOURCES.md) · Indexes: [`notes_mapping.json`](../notes_mapping.json) · [`operational_mapping.json`](../operational_mapping.json)
 
 ---
 
@@ -132,7 +133,39 @@ This mapping documents **how each group communicates with victims** during the r
 
 ---
 
-## Rapid Identification by Linguistic Signals
+## Rapid Identification — Ransom Note (T+0)
+
+> Mapped to [ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes). Full index: [`notes_mapping.json`](../notes_mapping.json).
+
+| If the **note** contains... | Probable group | ThreatLabz folder |
+|-----------------------------|----------------|-------------------|
+| *"surprise information security audit"* / backups removed | **Akira** | [`akira/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/akira) |
+| *"LockBit 3.0 the world's fastest"* | **lockbit3.0** | [`lockbit/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/lockbit) |
+| *"encrypted by CONTI strain"* | **Conti** | [`conti/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/conti) |
+| *"Welcome. Again."* + `{EXT}` extension | **REvil** | [`revil/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/revil) |
+| *"TRINITY LOCKER"* + onionmail email | **trinity** | [`trinity/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/trinity) |
+| *"Welcome to DarkSide"* | **Darkside** | [`darkside/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/darkside) |
+| *"We call ourselves Fog"* | **fog** | [`fog/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/fog) |
+| *"HOW_TO_DECRYPT"* / hiveleak onion | **Hive** | [`hive/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/hive) |
+| *"HUNTERS INTERNATIONAL"* | **Hunters International** | [`hunters/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/hunters) |
+| *"Your network has been infected!"* (Avaddon) | **Avaddon** | [`avaddon/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/avaddon) |
+| *"ATTENTION"* + readme_for_unlock | **Cloak** | [`cloak/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/cloak) |
+| *"-- Qilin"* | **Qilin** | [`qilin/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/qilin) |
+| *"Visit our Blog"* (FAQ template) | **RansomHub** | [`ransomhub/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/ransomhub) |
+| *"Your servers is LOCKED"* + tutanota | **Ranzy** | [`ranzy/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/ranzy) |
+| ASCII art *BLACK ... Matter* | **BlackMatter** | [`blackmatter/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/blackmatter) |
+| *"company id for log in"* | **BlackBasta** | [`blackbasta/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/blackbasta) |
+| *"decrypt one file for free"* (BOT/site) | **Mallox** | [`mallox/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/mallox) |
+| *"pay within 3 days"* + Nightspire | **Nightspire** | [`nightspire/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/nightspire) |
+| *"HOW TO RECOVER FILES"* + personal id | **NoEscape** | [`noescape/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/noescape) |
+| *"We work for money"* + numbered steps | **Dragonforce** | [`dragonforce/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/dragonforce) |
+| *"Your files have been encrypted"* + Avos portal | **Avos** | [`avoslocker/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/avoslocker) |
+
+**Not in ThreatLabz (Jun 2026):** Babuk, mount-locker, Pear, RunSomeWares — use chat signals in individual profiles.
+
+---
+
+## Rapid Identification — Negotiation Chat (T+N)
 
 | If the victim sees... | Probable group |
 |-----------------------|----------------|
@@ -208,6 +241,8 @@ Profiles for these groups should be **validated with additional CTI sources**:
 2. Quantitative analysis: message counts, average length, keyword frequency
 3. Qualitative analysis: tone, negotiation flow, TTPs, linguistic patterns
 4. Correlation with public CTI literature (Analyst1, Huntress, PCMag, SEC4U, ransomware.live)
+5. Ransom note mapping via [ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes) — T+0 attribution (see [`notes_mapping.json`](../notes_mapping.json))
+6. Operational mapping via [Ransomware-Tool-Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix) + [ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs) — hunt/kill chain T-7d→T-1h (see [`operational_mapping.json`](../operational_mapping.json))
 
 ## Limitations
 
@@ -215,7 +250,9 @@ Profiles for these groups should be **validated with additional CTI sources**:
 - Survivorship bias — only chats that reached public collection
 - Timestamps frequently absent or imprecise
 - Some chats involve professional negotiators, not the victim directly
+- Ransom notes are externally referenced; 4 actors have no ThreatLabz folder (Babuk, mount-locker, Pear, RunSomeWares)
+- Operational data (RTM/crocodyli) externally referenced; 5 actors without RTM, 19 without crocodyli folder
 
 ---
 
-*Source: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 241 chats analyzed*
+*CTI analysis — Ransomchats + ThreatLabz + RTM + ThreatActors-TTPs — For research, defense, and threat intelligence.*
