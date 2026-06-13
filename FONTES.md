@@ -1,4 +1,4 @@
-# Fontes de Dados — Ransomchats
+# Fontes de Dados — RansomDialect
 
 > Documentação da origem dos chats e mapeamento do comportamento de cada ator de ransomware.
 
@@ -6,7 +6,7 @@
 
 ## Origem dos Dados
 
-Todos os chats de negociações utilizados nesta análise foram obtidos do repositório público **[Ransomchats](https://github.com/Casualtek/Ransomchats)**, mantido por **Casualtek** (Valéry Marchive).
+Todos os chats de negociação utilizados nesta análise foram obtidos do repositório público **[Ransomchats](https://github.com/Casualtek/Ransomchats)**, mantido por **Casualtek** (Valéry Marchive).
 
 | Campo | Detalhe |
 |-------|---------|
@@ -20,19 +20,91 @@ Todos os chats de negociações utilizados nesta análise foram obtidos do repos
 
 ### Como os dados chegam ao repositório
 
-1. Backups HTML dos portais de chat dos grupos são coletados (por contribuidores, pesquisadores ou vítimas).
-2. Scripts em `parsers/` convertem HTML → JSON (BeautifulSoup).
-3. Conteúdo é anonimizado manualmente antes da publicação.
-4. Nenhum chat é publicado sem consentimento explícito para *parsing* e redação.
+1. Backups HTML dos portais de chat dos grupos são coletados (por contribuidores, pesquisadores ou vítimas)
+2. Scripts em `parsers/` convertem HTML → JSON (BeautifulSoup)
+3. Conteúdo é anonimizado manualmente antes da publicação
+4. Nenhum chat é publicado sem consentimento explícito para parsing e redação
 
 ### Escopo desta análise local
 
-A pasta `profiles/` contém perfis comportamentais derivados dos JSONs do repositório, organizados em:
+Esta pasta contém perfis comportamentais derivados dos JSONs do repositório, organizados em:
 
 - **`pt/`** — perfis em português
 - **`en/`** — perfis em inglês
 - **`pt/00-VISAO-GERAL.md`** — visão comparativa (PT)
 - **`en/00-OVERVIEW.md`** — visão comparativa (EN)
+- **`notes_mapping.json`** — índice ator → pasta ThreatLabz (notas de resgate)
+- **`operational_mapping.json`** — índice ator → RTM + crocodyli (intrusão/hunt)
+- **`ransomwarelive_index.json`** — índice ator → URLs de perfil (integração ransomware.live)
+
+---
+
+## Notas de Resgate — ThreatLabz (T+0)
+
+Fonte secundária para **atribuição precoce** no momento da descoberta do incidente. Repositório externo **[ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes)** (Zscaler ThreatLabz) — arquivos `.txt` por família, **não vendidos** neste projeto.
+
+| Campo | Detalhe |
+|-------|---------|
+| **Repositório** | [github.com/ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes) |
+| **Conteúdo** | Notas de resgate históricas e atuais (fase pré-chat) |
+| **Índice local** | [`notes_mapping.json`](./notes_mapping.json) |
+| **Escopo** | 21 dos 25 atores mapeados; 4 sem pasta no ThreatLabz |
+
+### Mapeamento ator → ThreatLabz
+
+| Ator Ransomchats | Pasta ThreatLabz | Status |
+|------------------|------------------|--------|
+| Akira | [`akira/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/akira) | mapeado |
+| lockbit3.0 | [`lockbit/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/lockbit) | mapeado |
+| Conti | [`conti/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/conti) | mapeado |
+| REvil | [`revil/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/revil) | mapeado |
+| trinity | [`trinity/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/trinity) | mapeado |
+| Dragonforce | [`dragonforce/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/dragonforce) | mapeado |
+| Hive | [`hive/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/hive) | mapeado |
+| Avaddon | [`avaddon/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/avaddon) | mapeado |
+| Nightspire | [`nightspire/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/nightspire) | mapeado |
+| fog | [`fog/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/fog) | mapeado |
+| BlackBasta | [`blackbasta/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/blackbasta) | mapeado |
+| Darkside | [`darkside/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/darkside) | mapeado |
+| Mallox | [`mallox/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/mallox) | mapeado |
+| BlackMatter | [`blackmatter/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/blackmatter) | mapeado |
+| Cloak | [`cloak/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/cloak) | mapeado |
+| NoEscape | [`noescape/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/noescape) | mapeado |
+| Qilin | [`qilin/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/qilin) | mapeado |
+| Ranzy | [`ranzy/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/ranzy) | mapeado |
+| Avos | [`avoslocker/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/avoslocker) | mapeado |
+| Hunters International | [`hunters/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/hunters) | mapeado |
+| RansomHub | [`ransomhub/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/ransomhub) | mapeado |
+| Babuk | — | sem entrada (jun/2026) |
+| mount-locker | — | sem entrada (jun/2026) |
+| Pear | — | sem entrada (jun/2026) |
+| RunSomeWares | — | sem entrada (jun/2026) |
+
+Cada perfil individual inclui a seção **Nota de Resgate (ThreatLabz)** com frases-chave, arquivos típicos e continuidade com o chat.
+
+---
+
+## Contexto Operacional — RTM + ThreatActors-TTPs (T-7d → T-1h)
+
+Fontes externas para **hunt/IR e kill chain MITRE** na fase pré-extorsão — complementam nota (T+0) e chat (T+N).
+
+| Fonte | Repositório | Índice local | Escopo (25 atores) |
+|-------|-------------|--------------|-------------------|
+| **Ransomware-Tool-Matrix (RTM)** | [BushidoUK/Ransomware-Tool-Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix) | [`operational_mapping.json`](./operational_mapping.json) | **20** com tools em matriz ou GroupProfile; **5** sem entrada (Cloak, NoEscape, Pear, RunSomeWares, trinity) |
+| **ThreatActors-TTPs (crocodyli)** | [crocodyli/ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs) | idem | **6** com pasta MITRE (Akira, BlackBasta, Dragonforce, Hunters International, lockbit3.0, RansomHub) |
+
+### RTM — GroupProfiles dedicados
+
+| Ator | GroupProfile RTM |
+|------|------------------|
+| Akira | [`GroupProfiles/Akira.md`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/GroupProfiles/Akira.md) |
+| BlackBasta | [`GroupProfiles/BlackBasta.md`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/GroupProfiles/BlackBasta.md) |
+| Dragonforce | [`GroupProfiles/DragonForce.md`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/GroupProfiles/DragonForce.md) |
+| Qilin | [`GroupProfiles/Qilin.md`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/GroupProfiles/Qilin.md) |
+
+Checklist de threat hunt: [`RTM_ThreatHunt_Checklist.csv`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv)
+
+Cada perfil inclui **Artefatos Pré-Extorsão (RTM)** e **Kill Chain MITRE (ThreatActors-TTPs)** quando aplicável.
 
 ---
 
@@ -47,7 +119,7 @@ Mapeamento do **papel comportamental** de cada grupo durante a fase de extorsão
 | **Conti** | 32 | Contrato jurídico; usa seguro cyber exfiltrado; escada de preços; remove blog temporariamente | Jurídico-comercial | [PT](pt/Conti.md) · [EN](en/Conti.md) |
 | **REvil** | 20 | Refuta argumentos com docs roubados; publicação escalonada; esconde blog durante talks | Frio, condescendente | [PT](pt/REvil.md) · [EN](en/REvil.md) |
 | **trinity** | 14 | Preço por endpoint (BTC/PC); inventário de hosts; prova social via "coworkers" | Seco, transacional | [PT](pt/trinity.md) · [EN](en/trinity.md) |
-| **Dragonforce** | 14 | Âncora em BTC; timer 2 semanas; foco em credibilidade da marca | Direto, confiante | [PT](pt/Dragonforce.md) · [EN](en/Dragonforce.md) |
+| **Dragonforce** | 14 | Ancora em BTC; timer 2 semanas; foco em credibilidade da marca | Direto, confiante | [PT](pt/Dragonforce.md) · [EN](en/Dragonforce.md) |
 | **Hive** | 8 | Supply-chain: recusa SMBs downstream; redireciona ao vendor MSP | Formal, inflexível | [PT](pt/Hive.md) · [EN](en/Hive.md) |
 | **Avaddon** | 7 | Sarcasmo e escalada emocional; General Decryptor único; DDoS e spam a terceiros | Sarcástico → agressivo | [PT](pt/Avaddon.md) · [EN](en/Avaddon.md) |
 | **Nightspire** | 7 | OSINT de filings públicos (10-K); pressão SEC/contratos; escalada com menção a FBI | Agressivo, calculista | [PT](pt/Nightspire.md) · [EN](en/Nightspire.md) |
@@ -73,22 +145,22 @@ Mapeamento do **papel comportamental** de cada grupo durante a fase de extorsão
 ## Padrões transversais por tipo de ator
 
 ### Atores "corporativos" (Akira, Conti, BlackBasta, Qilin)
-Fazem *due diligence* financeira, oferecem pacotes pós-pagamento estruturados e negociam com flexibilidade real após ancoragem alta.
+Fazem due diligence financeira, oferecem pacotes pós-pagamento estruturados, negociam com flexibilidade real após ancoragem alta.
 
 ### Atores "minimalistas" (LockBit 3.0, Ranzy, trinity, fog)
-Minimizam interações, fixam preço rapidamente e evitam *rapport*. LockBit adapta preço ao porte; trinity cobra por endpoint.
+Minimizam interação, fixam preço rapidamente, evitam rapport. LockBit adapta preço ao porte; trinity cobra por endpoint.
 
 ### Atores "psicológicos" (Avaddon, BlackMatter, REvil)
 Usam sarcasmo, ironia e documentos exfiltrados contra argumentos da vítima. Escalada emocional rápida.
 
 ### Atores "procedurais" (Cloak, mount-locker, Pear)
-Impõem regras formais, *gatekeeping* de autoridade, frameworks legais ou contratos detalhados antes de negociar valores.
+Impõem regras formais, gatekeeping de autoridade, frameworks legais ou contratos detalhados antes de negociar valor.
 
 ### Atores com modelo operacional único
-- **Hive** — ataque *supply-chain*; não negocia com vítimas indiretas.
-- **Avos** — separação entre Staff central e *affiliate*.
-- **Mallox** — automação de desconto via BOT no chat.
-- **Hunters International** — modelo *take-it-or-leave-it* extremo.
+- **Hive** — ataque supply-chain; não negocia com vítimas indiretas
+- **Avos** — separação Staff central / affiliate
+- **Mallox** — automação de desconto via BOT no chat
+- **Hunters International** — modelo take-it-or-leave-it extremo
 
 ---
 
@@ -96,7 +168,13 @@ Impõem regras formais, *gatekeeping* de autoridade, frameworks legais ou contra
 
 | Recurso | Link |
 |---------|------|
-| Repositório fonte | [github.com/Casualtek/Ransomchats](https://github.com/Casualtek/Ransomchats) |
+| Repositório fonte (chats) | [github.com/Casualtek/Ransomchats](https://github.com/Casualtek/Ransomchats) |
+| Notas de resgate (T+0) | [github.com/ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes) |
+| Índice notas | [`notes_mapping.json`](./notes_mapping.json) |
+| Tool matrix (T-7d→T-1h) | [github.com/BushidoUK/Ransomware-Tool-Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix) |
+| TTPs MITRE (crocodyli) | [github.com/crocodyli/ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs) |
+| Índice operacional | [`operational_mapping.json`](./operational_mapping.json) |
+| Índice ransomware.live | [`ransomwarelive_index.json`](./ransomwarelive_index.json) |
 | Leitor de chats | [ransomch.at](https://ransomch.at/) |
 | Integração CTI | [ransomware.live/negotiations](https://www.ransomware.live/#/negotiations) |
 | Contribuições | @g0njxa, Rakesh Krishnan, @JMousqueton, eCime.ch |
@@ -108,11 +186,13 @@ Impõem regras formais, *gatekeeping* de autoridade, frameworks legais ou contra
 
 ## Limitações
 
-- Dados anonimizados — contexto completo da vítima indisponível.
-- Viés de sobrevivência — apenas chats que chegaram à coleta pública.
-- Alguns grupos têm amostra muito pequena (1–2 chats).
-- Perfis derivados por análise CTI local; não são documentação oficial do repositório.
+- Dados anonimizados — contexto completo da vítima indisponível
+- Viés de sobrevivência — apenas chats que chegaram à coleta pública
+- Alguns grupos têm amostra muito pequena (1–2 chats)
+- Perfis derivados por análise CTI local; não são documentação oficial do repositório
+- Notas de resgate referenciadas externamente (ThreatLabz); 4 atores sem pasta correspondente
+- Dados operacionais (RTM/crocodyli) referenciados externamente; cobertura parcial por ator
 
 ---
 
-*Análise derivada do dataset [Ransomchats](https://github.com/Casualtek/Ransomchats) — uso para pesquisa, defesa e threat intelligence.*
+*Análise derivada do dataset [Ransomchats](https://github.com/Casualtek/Ransomchats) + mapeamentos [ThreatLabz](https://github.com/ThreatLabz/ransomware_notes), [RTM](https://github.com/BushidoUK/Ransomware-Tool-Matrix) e [ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs) — uso para pesquisa, defesa e threat intelligence.*
