@@ -131,4 +131,51 @@ Maturidade:     Muito Alta (2023–2025)
 
 ---
 
-*Fonte: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 60 chats analisados · [EN](../en/Akira.md)*
+## Nota de Resgate (ThreatLabz)
+
+> Mapeamento para atribuição precoce (T+0). Fonte: [ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes) — notas **não** incluídas neste repositório, apenas referenciadas.
+
+| Campo | Detalhe |
+|-------|---------|
+| **Pasta ThreatLabz** | [`akira/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/akira) |
+| **Arquivos típicos** | `akira_readme.txt`, `akira_readme_2.txt`, `akira_readme_3.txt` |
+| **Extensão / artefato** | `.akira` |
+| **Frases-chave da nota** | *"surprise information security audit"*, *"internal infrastructure... fully or partially dead"*, *"backups... completely removed"* |
+| **Continuidade com o chat** | Mesma persona de suporte técnico; a nota anuncia exfiltração e destruição de backups antes do portal de chat. |
+
+**Se a nota contém...** → confirma **Akira** antes de abrir o portal de negociação.
+
+---
+
+## Artefatos Pré-Extorsão (RTM)
+
+> Fase **T-7d → T-1h** — tools observadas em intrusões que levaram ao deploy. Fonte: [Ransomware-Tool-Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix) — **não vendidas** neste repositório.
+
+| Campo | Detalhe |
+|-------|---------|
+| **GroupProfile RTM** | [`Akira`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/GroupProfiles/Akira.md) |
+| **Tools-chave** | `Advanced IP Scanner`, `AnyDesk`, `PowerTool`, `DonPAPI`, `Impacket`, `Cloudflared`, `FileZilla`, `Masscan`, `MobaXterm`, `Zemana Anti-Rootkit` |
+| **Matrizes** | [`CredentialTheft`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/CredentialTheft.md), [`DefenseEvasion`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/DefenseEvasion.md), [`DiscoveryEnum`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/DiscoveryEnum.md), [`Exfiltration`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Exfiltration.md), [`Networking`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Networking.md), [`Offsec`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Offsec.md), [`RMM-Tools`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/RMM-Tools.md) |
+| **Checklist hunt** | [`RTM_ThreatHunt_Checklist.csv`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv) |
+| **Continuidade com chat/nota** | RClone/temp.sh na intrusão explicam privnote e listas de exfiltração no chat. |
+
+**Se estes artefatos aparecem no ambiente** → reforça atribuição a **Akira** junto com nota e perfil de negociação.
+
+---
+
+## Kill Chain MITRE (ThreatActors-TTPs)
+
+> TTPs, CVEs e histórico pré-extorsão. Fonte: [crocodyli/ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs) — **não vendido** neste repositório.
+
+| Campo | Detalhe |
+|-------|---------|
+| **Pasta** | [`Akira/`](https://github.com/crocodyli/ThreatActors-TTPs/tree/main/Akira) |
+| **TTPs (MITRE)** | [`Akira-TTP`](https://github.com/crocodyli/ThreatActors-TTPs/blob/main/Akira/Akira-TTP.md) |
+| **CVEs** | [`CVEs`](https://github.com/crocodyli/ThreatActors-TTPs/blob/main/Akira/CVEs-Akira.md) |
+| **TTPs-chave** | *T1190 — Exploração de VPN/edge (Cisco, SonicWall)*; *T1133 — Acesso remoto com credenciais roubadas*; *T1486 — Criptografia + exfiltração pré-ransom* |
+
+Referência cruzada com [ransomware.live](https://www.ransomware.live/) e matriz RTM.
+
+---
+
+*Fonte: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 60 chats analisados · [EN](../en/Akira.md) · Notas: [ThreatLabz](https://github.com/ThreatLabz/ransomware_notes) · Ops: [RTM](https://github.com/BushidoUK/Ransomware-Tool-Matrix) · [TTPs](https://github.com/crocodyli/ThreatActors-TTPs)*

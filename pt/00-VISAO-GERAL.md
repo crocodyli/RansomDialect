@@ -1,7 +1,7 @@
 # Mapeamento de Perfis de Negociação Ransomware
 
-> **Análise CTI** — Perfis comportamentais de 25 grupos de ransomware baseados em 241 negociações reais (~11.473 mensagens) do dataset [Ransomchats](https://github.com/Casualtek/Ransomchats).  
-> Versão em inglês: [`en/00-OVERVIEW.md`](../en/00-OVERVIEW.md) · Fontes: [`FONTES.md`](../FONTES.md)
+> **Análise CTI** — Perfis comportamentais de 25 grupos de ransomware baseados em 241 negociações reais (~11.473 mensagens) do dataset [Ransomchats](https://github.com/Casualtek/Ransomchats), com mapeamentos [ThreatLabz](https://github.com/ThreatLabz/ransomware_notes) (T+0), [RTM](https://github.com/BushidoUK/Ransomware-Tool-Matrix) e [ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs) (T-7d→T-1h).  
+> Versão em inglês: [`en/00-OVERVIEW.md`](../en/00-OVERVIEW.md) · Fontes: [`FONTES.md`](../FONTES.md) · Índices: [`notes_mapping.json`](../notes_mapping.json) · [`operational_mapping.json`](../operational_mapping.json)
 
 ---
 
@@ -133,7 +133,39 @@ Este mapeamento documenta **como cada grupo se comunica com vítimas** durante a
 
 ---
 
-## Identificação Rápida por Sinais Linguísticos
+## Identificação Rápida — Nota de Resgate (T+0)
+
+> Mapeamento para [ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes). Índice completo: [`notes_mapping.json`](../notes_mapping.json).
+
+| Se a **nota** contém... | Provável grupo | Pasta ThreatLabz |
+|-------------------------|----------------|------------------|
+| *"surprise information security audit"* / backups removidos | **Akira** | [`akira/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/akira) |
+| *"LockBit 3.0 the world's fastest"* | **lockbit3.0** | [`lockbit/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/lockbit) |
+| *"encrypted by CONTI strain"* | **Conti** | [`conti/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/conti) |
+| *"Welcome. Again."* + extensão `{EXT}` | **REvil** | [`revil/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/revil) |
+| *"TRINITY LOCKER"* + e-mail onionmail | **trinity** | [`trinity/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/trinity) |
+| *"Welcome to DarkSide"* | **Darkside** | [`darkside/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/darkside) |
+| *"We call ourselves Fog"* | **fog** | [`fog/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/fog) |
+| *"HOW_TO_DECRYPT"* / hiveleak onion | **Hive** | [`hive/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/hive) |
+| *"HUNTERS INTERNATIONAL"* | **Hunters International** | [`hunters/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/hunters) |
+| *"Your network has been infected!"* (Avaddon) | **Avaddon** | [`avaddon/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/avaddon) |
+| *"ATTENTION"* + readme_for_unlock | **Cloak** | [`cloak/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/cloak) |
+| *"-- Qilin"* | **Qilin** | [`qilin/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/qilin) |
+| *"Visit our Blog"* (FAQ template) | **RansomHub** | [`ransomhub/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/ransomhub) |
+| *"Your servers is LOCKED"* + tutanota | **Ranzy** | [`ranzy/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/ranzy) |
+| Arte ASCII *BLACK ... Matter* | **BlackMatter** | [`blackmatter/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/blackmatter) |
+| *"company id for log in"* | **BlackBasta** | [`blackbasta/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/blackbasta) |
+| *"decrypt one file for free"* (BOT/site) | **Mallox** | [`mallox/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/mallox) |
+| *"pay within 3 days"* + Nightspire | **Nightspire** | [`nightspire/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/nightspire) |
+| *"HOW TO RECOVER FILES"* + personal id | **NoEscape** | [`noescape/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/noescape) |
+| *"We work for money"* + passos numerados | **Dragonforce** | [`dragonforce/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/dragonforce) |
+| *"Your files have been encrypted"* + portal Avos | **Avos** | [`avoslocker/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/avoslocker) |
+
+**Sem nota no ThreatLabz (jun/2026):** Babuk, mount-locker, Pear, RunSomeWares — use sinais do chat nos perfis individuais.
+
+---
+
+## Identificação Rápida — Chat de Negociação (T+N)
 
 | Se a vítima vê... | Provável grupo |
 |-------------------|----------------|
@@ -209,6 +241,8 @@ Perfis destes grupos devem ser **validados com outras fontes CTI**:
 2. Análise quantitativa: contagem de mensagens, tamanho médio, frequência de palavras-chave
 3. Análise qualitativa: tom, fluxo de negociação, TTPs, padrões linguísticos
 4. Correlação com literatura CTI pública (Analyst1, Huntress, PCMag, SEC4U, ransomware.live)
+5. Mapeamento de notas de resgate via [ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes) — atribuição T+0 (ver [`notes_mapping.json`](../notes_mapping.json))
+6. Mapeamento operacional via [Ransomware-Tool-Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix) + [ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs) — hunt/kill chain T-7d→T-1h (ver [`operational_mapping.json`](../operational_mapping.json))
 
 ## Limitações
 
@@ -216,7 +250,9 @@ Perfis destes grupos devem ser **validados com outras fontes CTI**:
 - Viés de sobrevivência — apenas chats que chegaram à coleta pública
 - Timestamps frequentemente ausentes ou imprecisos
 - Alguns chats envolvem negociadores profissionais, não a vítima diretamente
+- Notas de resgate são referenciadas externamente; 4 atores sem pasta no ThreatLabz (Babuk, mount-locker, Pear, RunSomeWares)
+- Dados operacionais (RTM/crocodyli) referenciados externamente; 5 atores sem RTM, 19 sem pasta crocodyli
 
 ---
 
-*Análise CTI — Ransomchats Dataset — Uso para pesquisa, defesa e threat intelligence.*
+*Análise CTI — Ransomchats + ThreatLabz + RTM + ThreatActors-TTPs — Uso para pesquisa, defesa e threat intelligence.*

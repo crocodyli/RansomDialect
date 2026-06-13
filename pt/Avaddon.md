@@ -34,3 +34,46 @@ Avaddon combina **profissionalismo superficial com agressividade real**. Usa sar
 ```
 Flexibilidade: Média | Pressão: Alta | Sofisticação: Média
 ```
+---
+
+## Nota de Resgate (ThreatLabz)
+
+> Mapeamento para atribuição precoce (T+0). Fonte: [ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes) — notas **não** incluídas neste repositório, apenas referenciadas.
+
+| Campo | Detalhe |
+|-------|---------|
+| **Pasta ThreatLabz** | [`avaddon/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/avaddon) |
+| **Arquivos típicos** | `avaddon.txt` |
+| **Extensão / artefato** | `{{ext}} (variável por campanha)` |
+| **Frases-chave da nota** | *"Your network has been infected!"*, *"DO NOT DELETE THIS FILE"*, *"General Decryptor"* |
+| **Continuidade com o chat** | Tom agressivo da nota evolui para sarcasmo e *Tick tock* no chat. |
+
+**Se a nota contém...** → confirma **Avaddon** antes de abrir o portal de negociação.
+---
+
+## Artefatos Pré-Extorsão (RTM)
+
+> Fase **T-7d → T-1h** — tools observadas em intrusões que levaram ao deploy. Fonte: [Ransomware-Tool-Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix) — **não vendidas** neste repositório.
+
+| Campo | Detalhe |
+|-------|---------|
+| **GroupProfile RTM** | — |
+| **Tools-chave** | `Mimikatz`, `SharpDump`, `GMER`, `PowerTool`, `TDSSKiller`, `SoftPerfect NetScan`, `Anonfiles`, `MEGA`, `ProtonMail`, `Sendspace` |
+| **Matrizes** | [`CredentialTheft`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/CredentialTheft.md), [`DefenseEvasion`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/DefenseEvasion.md), [`DiscoveryEnum`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/DiscoveryEnum.md), [`Exfiltration`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Exfiltration.md), [`Offsec`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Offsec.md) |
+| **Checklist hunt** | [`RTM_ThreatHunt_Checklist.csv`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv) |
+| **Continuidade com chat/nota** | DDoS e spam a terceiros na operação alinham com escalada emocional na negociação. |
+
+**Se estes artefatos aparecem no ambiente** → reforça atribuição a **Avaddon** junto com nota e perfil de negociação.
+
+---
+
+## Kill Chain MITRE (ThreatActors-TTPs)
+
+> Fonte externa: [crocodyli/ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs).
+
+| Campo | Detalhe |
+|-------|---------|
+| **Status** | Sem pasta correspondente (jun/2026) |
+| **Alternativa** | Consultar matrizes RTM e perfil de negociação deste repositório |
+
+Índice: [`operational_mapping.json`](../operational_mapping.json)

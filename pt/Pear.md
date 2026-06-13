@@ -35,3 +35,41 @@ Pear possui um dos **pacotes de condições mais detalhados** do dataset — con
 Flexibilidade: Baixa-Média | Pressão: Alta | Sofisticação: Alta
 ⚠️ Apenas 1 chat — validar com outras fontes
 ```
+---
+
+## Nota de Resgate (ThreatLabz)
+
+> Mapeamento para atribuição precoce (T+0). Fonte externa: [ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes).
+
+| Campo | Detalhe |
+|-------|---------|
+| **Status** | Sem pasta correspondente no ThreatLabz (verificado jun/2026) |
+| **Artefato conhecido** | .pear (conhecido em CTI; sem nota no ThreatLabz) |
+| **Atribuição alternativa** | Sem entrada no ThreatLabz — use condições numeradas (a–e) e *non-negotiable* no chat. |
+
+Consulte [`notes_mapping.json`](../notes_mapping.json) para o índice completo.
+---
+
+## Artefatos Pré-Extorsão (RTM)
+
+> Fase **T-7d → T-1h** — hunt/IR durante crise. Fonte: [Ransomware-Tool-Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix).
+
+| Campo | Detalhe |
+|-------|---------|
+| **Status** | Sem entrada dedicada no RTM (jun/2026) |
+| **Checklist geral** | [`RTM_ThreatHunt_Checklist.csv`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv) |
+| **Continuidade com chat/nota** | Sem entrada RTM/crocodyli; chat com contrato numerado (a–e). |
+
+Índice: [`operational_mapping.json`](../operational_mapping.json)
+---
+
+## Kill Chain MITRE (ThreatActors-TTPs)
+
+> Fonte externa: [crocodyli/ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs).
+
+| Campo | Detalhe |
+|-------|---------|
+| **Status** | Sem pasta correspondente (jun/2026) |
+| **Alternativa** | Consultar matrizes RTM e perfil de negociação deste repositório |
+
+Índice: [`operational_mapping.json`](../operational_mapping.json)

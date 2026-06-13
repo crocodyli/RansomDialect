@@ -34,3 +34,46 @@ BlackMatter usa **humor sarcástico para mascarar operação sofisticada**. Conh
 ```
 Flexibilidade: Média | Pressão: Média | Sofisticação: Alta
 ```
+---
+
+## Nota de Resgate (ThreatLabz)
+
+> Mapeamento para atribuição precoce (T+0). Fonte: [ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes) — notas **não** incluídas neste repositório, apenas referenciadas.
+
+| Campo | Detalhe |
+|-------|---------|
+| **Pasta ThreatLabz** | [`blackmatter/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/blackmatter) |
+| **Arquivos típicos** | `blackmatter.txt` |
+| **Extensão / artefato** | `.blackmatter / .pay2key` |
+| **Frases-chave da nota** | *"BLACK ... Matter"*, *"How may I help you?"*, *"universal decryptor"* |
+| **Continuidade com o chat** | Arte ASCII da nota; chat mantém sarcasmo e conhecimento de infra em tempo real. |
+
+**Se a nota contém...** → confirma **BlackMatter** antes de abrir o portal de negociação.
+---
+
+## Artefatos Pré-Extorsão (RTM)
+
+> Fase **T-7d → T-1h** — tools observadas em intrusões que levaram ao deploy. Fonte: [Ransomware-Tool-Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix) — **não vendidas** neste repositório.
+
+| Campo | Detalhe |
+|-------|---------|
+| **GroupProfile RTM** | — |
+| **Tools-chave** | `PrivatLab` |
+| **Matrizes** | [`Exfiltration`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Exfiltration.md) |
+| **Checklist hunt** | [`RTM_ThreatHunt_Checklist.csv`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv) |
+| **Continuidade com chat/nota** | Impacket/Mimikatz típicos; chat usa sarcasmo e conhecimento de infra ao vivo. |
+
+**Se estes artefatos aparecem no ambiente** → reforça atribuição a **BlackMatter** junto com nota e perfil de negociação.
+
+---
+
+## Kill Chain MITRE (ThreatActors-TTPs)
+
+> Fonte externa: [crocodyli/ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs).
+
+| Campo | Detalhe |
+|-------|---------|
+| **Status** | Sem pasta correspondente (jun/2026) |
+| **Alternativa** | Consultar matrizes RTM e perfil de negociação deste repositório |
+
+Índice: [`operational_mapping.json`](../operational_mapping.json)

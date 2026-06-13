@@ -120,4 +120,46 @@ Maturidade:     Muito Alta (grupo desmantelado 2021)
 
 ---
 
-*Fonte: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 20 chats analisados · [EN](../en/REvil.md)*
+## Nota de Resgate (ThreatLabz)
+
+> Mapeamento para atribuição precoce (T+0). Fonte: [ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes) — notas **não** incluídas neste repositório, apenas referenciadas.
+
+| Campo | Detalhe |
+|-------|---------|
+| **Pasta ThreatLabz** | [`revil/`](https://github.com/ThreatLabz/ransomware_notes/tree/main/revil) |
+| **Arquivos típicos** | `revil1.txt`, `revil2.txt`, `revil3.txt` |
+| **Extensão / artefato** | `{EXT} (variável por campanha)` |
+| **Frases-chave da nota** | *"Welcome. Again."*, *"What guarantees?"*, *"NEVER restore without instructions"* |
+| **Continuidade com o chat** | Nota estruturada em FAQ; chat torna-se condescendente e refuta com docs roubados. |
+
+**Se a nota contém...** → confirma **REvil** antes de abrir o portal de negociação.
+
+---
+
+## Artefatos Pré-Extorsão (RTM)
+
+> Fase **T-7d → T-1h** — tools observadas em intrusões que levaram ao deploy. Fonte: [Ransomware-Tool-Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix) — **não vendidas** neste repositório.
+
+| Campo | Detalhe |
+|-------|---------|
+| **GroupProfile RTM** | — |
+| **Tools-chave** | `AdFind`, `Bloodhound`, `PrivatLab`, `RClone`, `Sendspace`, `BITSAdmin`, `Cobalt Strike` |
+| **Matrizes** | [`DiscoveryEnum`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/DiscoveryEnum.md), [`Exfiltration`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Exfiltration.md), [`LOLBAS`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/LOLBAS.md), [`Offsec`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Offsec.md) |
+| **Checklist hunt** | [`RTM_ThreatHunt_Checklist.csv`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv) |
+| **Continuidade com chat/nota** | Exfil tools variados; chat condescendente com docs roubados. |
+
+**Se estes artefatos aparecem no ambiente** → reforça atribuição a **REvil** junto com nota e perfil de negociação.
+
+---
+
+## Kill Chain MITRE (ThreatActors-TTPs)
+
+> Fonte externa: [crocodyli/ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs).
+
+| Campo | Detalhe |
+|-------|---------|
+| **Status** | Sem pasta correspondente (jun/2026) |
+| **Alternativa** | Consultar matrizes RTM e perfil de negociação deste repositório |
+
+Índice: [`operational_mapping.json`](../operational_mapping.json)
+*Fonte: [Ransomchats](https://github.com/Casualtek/Ransomchats) — 20 chats analisados · [EN](../en/REvil.md)* · Notas: [ThreatLabz](https://github.com/ThreatLabz/ransomware_notes) · Ops: [RTM](https://github.com/BushidoUK/Ransomware-Tool-Matrix) · [TTPs](https://github.com/crocodyli/ThreatActors-TTPs)

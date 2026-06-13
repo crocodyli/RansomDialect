@@ -34,3 +34,44 @@ Babuk combina **formalidade técnica com ameaças legais agressivas** (GDPR, pri
 ```
 Flexibilidade: Média-Alta | Pressão: Alta | Sofisticação: Alta
 ```
+---
+
+## Nota de Resgate (ThreatLabz)
+
+> Mapeamento para atribuição precoce (T+0). Fonte externa: [ThreatLabz/ransomware_notes](https://github.com/ThreatLabz/ransomware_notes).
+
+| Campo | Detalhe |
+|-------|---------|
+| **Status** | Sem pasta correspondente no ThreatLabz (verificado jun/2026) |
+| **Artefato conhecido** | .babuk (conhecido em CTI; sem nota no ThreatLabz) |
+| **Atribuição alternativa** | Sem entrada no ThreatLabz — use *Technical support is ready* e perguntas sobre seguro no chat. |
+
+Consulte [`notes_mapping.json`](../notes_mapping.json) para o índice completo.
+---
+
+## Artefatos Pré-Extorsão (RTM)
+
+> Fase **T-7d → T-1h** — tools observadas em intrusões que levaram ao deploy. Fonte: [Ransomware-Tool-Matrix](https://github.com/BushidoUK/Ransomware-Tool-Matrix) — **não vendidas** neste repositório.
+
+| Campo | Detalhe |
+|-------|---------|
+| **GroupProfile RTM** | — |
+| **Tools-chave** | `File[.]io` |
+| **Matrizes** | [`Exfiltration`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/Tools/Exfiltration.md) |
+| **Checklist hunt** | [`RTM_ThreatHunt_Checklist.csv`](https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv) |
+| **Continuidade com chat/nota** | Ferramentas de credential theft precedem perguntas sobre seguro cyber no chat. |
+
+**Se estes artefatos aparecem no ambiente** → reforça atribuição a **Babuk** junto com nota e perfil de negociação.
+
+---
+
+## Kill Chain MITRE (ThreatActors-TTPs)
+
+> Fonte externa: [crocodyli/ThreatActors-TTPs](https://github.com/crocodyli/ThreatActors-TTPs).
+
+| Campo | Detalhe |
+|-------|---------|
+| **Status** | Sem pasta correspondente (jun/2026) |
+| **Alternativa** | Consultar matrizes RTM e perfil de negociação deste repositório |
+
+Índice: [`operational_mapping.json`](../operational_mapping.json)
