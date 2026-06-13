@@ -1,0 +1,866 @@
+{
+  "source": {
+    "rtm": {
+      "repository": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+      "maintainer": "BushidoUK / BushidoToken",
+      "description": "Tools observed in intrusions leading to ransomware deployment — mapped for hunt/IR (pre-extortion).",
+      "checklist": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv",
+      "last_verified": "2026-06-13"
+    },
+    "crocodyli": {
+      "repository": "https://github.com/crocodyli/ThreatActors-TTPs",
+      "maintainer": "crocodyli",
+      "description": "MITRE ATT&CK TTPs, CVEs, tools and history per threat actor — pre-extortion kill chain.",
+      "last_verified": "2026-06-13"
+    }
+  },
+  "actors": {
+    "Akira": {
+      "rtm": {
+        "status": "group_profile+matrix",
+        "group_profile": "Akira",
+        "group_profile_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/GroupProfiles/Akira.md",
+        "key_tools": [
+          "Advanced IP Scanner",
+          "AnyDesk",
+          "PowerTool",
+          "DonPAPI",
+          "Impacket",
+          "Cloudflared",
+          "FileZilla",
+          "Masscan",
+          "MobaXterm",
+          "Zemana Anti-Rootkit"
+        ],
+        "tool_matrices": [
+          "CredentialTheft",
+          "DefenseEvasion",
+          "DiscoveryEnum",
+          "Exfiltration",
+          "Networking",
+          "Offsec",
+          "RMM-Tools"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "mapped",
+        "folder": "Akira",
+        "folder_url": "https://github.com/crocodyli/ThreatActors-TTPs/tree/main/Akira",
+        "ttp_url": "https://github.com/crocodyli/ThreatActors-TTPs/blob/main/Akira/Akira-TTP.md",
+        "cves_url": "https://github.com/crocodyli/ThreatActors-TTPs/blob/main/Akira/CVEs-Akira.md",
+        "key_ttps": [
+          "T1190 — Exploração de VPN/edge (Cisco, SonicWall)",
+          "T1133 — Acesso remoto com credenciais roubadas",
+          "T1486 — Criptografia + exfiltração pré-ransom"
+        ],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "RClone/temp.sh na intrusão explicam privnote e listas de exfiltração no chat.",
+      "operational_continuity_en": "RClone/temp.sh during intrusion explain privnote and exfil lists in chat."
+    },
+    "Avaddon": {
+      "rtm": {
+        "status": "tool_matrix",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [
+          "Mimikatz",
+          "SharpDump",
+          "GMER",
+          "PowerTool",
+          "TDSSKiller",
+          "SoftPerfect NetScan",
+          "Anonfiles",
+          "MEGA",
+          "ProtonMail",
+          "Sendspace"
+        ],
+        "tool_matrices": [
+          "CredentialTheft",
+          "DefenseEvasion",
+          "DiscoveryEnum",
+          "Exfiltration",
+          "Offsec"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "DDoS e spam a terceiros na operação alinham com escalada emocional na negociação.",
+      "operational_continuity_en": "DDoS and third-party spam in operations align with emotional escalation in chat."
+    },
+    "Avos": {
+      "rtm": {
+        "status": "tool_matrix",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [
+          "LaZagne",
+          "Mimikatz",
+          "XenArmor",
+          "Avast Anti-Rootkit driver",
+          "NirSoft WinLister",
+          "Nmap",
+          "SoftPerfect NetScan",
+          "FileZilla",
+          "Gofile[.]io",
+          "PSCP"
+        ],
+        "tool_matrices": [
+          "CredentialTheft",
+          "DefenseEvasion",
+          "DiscoveryEnum",
+          "Exfiltration",
+          "LOLBAS",
+          "Networking",
+          "Offsec",
+          "RMM-Tools"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Modelo RaaS Staff/affiliate reflete separação operador central vs. afiliado no chat.",
+      "operational_continuity_en": "RaaS Staff/affiliate model mirrors central operator vs. affiliate split in chat."
+    },
+    "Babuk": {
+      "rtm": {
+        "status": "tool_matrix",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [
+          "File[.]io"
+        ],
+        "tool_matrices": [
+          "Exfiltration"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Ferramentas de credential theft precedem perguntas sobre seguro cyber no chat.",
+      "operational_continuity_en": "Credential theft tools precede cyber insurance screening in chat."
+    },
+    "BlackBasta": {
+      "rtm": {
+        "status": "group_profile+matrix",
+        "group_profile": "BlackBasta",
+        "group_profile_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/GroupProfiles/BlackBasta.md",
+        "key_tools": [
+          "AdFind",
+          "AnyDesk",
+          "Backstab",
+          "Mimikatz",
+          "Brute Ratel (BRc4)",
+          "BITSAdmin",
+          "Rclone",
+          "Bloodhound",
+          "Atera",
+          "Cobalt Strike"
+        ],
+        "tool_matrices": [
+          "CredentialTheft",
+          "DefenseEvasion",
+          "DiscoveryEnum",
+          "Exfiltration",
+          "LOLBAS",
+          "Offsec",
+          "RMM-Tools"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "mapped",
+        "folder": "BlackBasta",
+        "folder_url": "https://github.com/crocodyli/ThreatActors-TTPs/tree/main/BlackBasta",
+        "ttp_url": "https://github.com/crocodyli/ThreatActors-TTPs/blob/main/BlackBasta/BlackBasta-TTP.md",
+        "cves_url": null,
+        "key_ttps": [
+          "T1190 — Exploração de appliances expostos (Qlik, ConnectWise)",
+          "T1219 — RMM (ScreenConnect, RDP) para persistência",
+          "T1486 — Deploy via GPO / PsExec"
+        ],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Qlik/ConnectWise no acesso inicial; chat mantém framing business e piso ~$150K.",
+      "operational_continuity_en": "Qlik/ConnectWise initial access; chat keeps businessman framing and ~$150K floor."
+    },
+    "BlackMatter": {
+      "rtm": {
+        "status": "tool_matrix",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [
+          "PrivatLab"
+        ],
+        "tool_matrices": [
+          "Exfiltration"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Impacket/Mimikatz típicos; chat usa sarcasmo e conhecimento de infra ao vivo.",
+      "operational_continuity_en": "Typical Impacket/Mimikatz; chat uses sarcasm and live infra awareness."
+    },
+    "Cloak": {
+      "rtm": {
+        "status": "not_found",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [],
+        "tool_matrices": [],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Sem matriz RTM dedicada; chat procedural (6 regras + 11 passos) é o IOC principal.",
+      "operational_continuity_en": "No dedicated RTM matrix; procedural chat (6 rules + 11 steps) is the main IOC."
+    },
+    "Conti": {
+      "rtm": {
+        "status": "tool_matrix",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [
+          "Mimikatz",
+          "ProcDump",
+          "Router Scan",
+          "SharpChrome",
+          "GMER",
+          "PCHunter",
+          "AdFind",
+          "Bloodhound",
+          "PowerView",
+          "Seatbelt"
+        ],
+        "tool_matrices": [
+          "CredentialTheft",
+          "DefenseEvasion",
+          "DiscoveryEnum",
+          "Exfiltration",
+          "LOLBAS",
+          "Offsec",
+          "RMM-Tools"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Dropfiles/RClone na exfiltração; chat usa seguro cyber exfiltrado para pricing.",
+      "operational_continuity_en": "Dropfiles/RClone in exfiltration; chat uses exfiltrated cyber insurance for pricing."
+    },
+    "Darkside": {
+      "rtm": {
+        "status": "tool_matrix",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [
+          "Mimikatz",
+          "SessionGopher",
+          "Darkside/TrueSight driver (BYOVD)",
+          "ADRecon",
+          "AdFind",
+          "Advanced IP Scanner",
+          "SoftPerfect NetScan",
+          "Bashupload",
+          "MEGA",
+          "pCloud"
+        ],
+        "tool_matrices": [
+          "CredentialTheft",
+          "DefenseEvasion",
+          "DiscoveryEnum",
+          "Exfiltration",
+          "LOLBAS",
+          "Networking",
+          "Offsec",
+          "RMM-Tools"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Bashupload/exfil tools; chat escala OSINT financeiro e ameaças à imprensa.",
+      "operational_continuity_en": "Bashupload/exfil tools; chat escalates financial OSINT and media threats."
+    },
+    "Dragonforce": {
+      "rtm": {
+        "status": "group_profile+matrix",
+        "group_profile": "DragonForce",
+        "group_profile_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/GroupProfiles/DragonForce.md",
+        "key_tools": [
+          "AdFind",
+          "ADVobfuscator",
+          "LaZagne",
+          "Cobalt Strike",
+          "PsExec",
+          "MEGA",
+          "Advanced IP Scanner",
+          "Darkside/TrueSight driver (BYOVD)",
+          "Mimikatz",
+          "RClone"
+        ],
+        "tool_matrices": [
+          "CredentialTheft",
+          "DefenseEvasion",
+          "DiscoveryEnum",
+          "Exfiltration",
+          "LOLBAS",
+          "Offsec"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "mapped",
+        "folder": "DragonForce",
+        "folder_url": "https://github.com/crocodyli/ThreatActors-TTPs/tree/main/DragonForce",
+        "ttp_url": "https://github.com/crocodyli/ThreatActors-TTPs/blob/main/DragonForce/DragonForce-TTP.md",
+        "cves_url": null,
+        "key_ttps": [
+          "T1190 — Vetores de acesso expostos",
+          "T1048 — Exfiltração antes do lock",
+          "T1486 — Operação RaaS com timer de leak"
+        ],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Kill chain estruturada; chat ancora BTC com timer de 2 semanas.",
+      "operational_continuity_en": "Structured kill chain; chat anchors BTC with 2-week timer."
+    },
+    "fog": {
+      "rtm": {
+        "status": "tool_matrix",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [
+          "DonPAPI",
+          "Veeam-Get-Creds",
+          "Advanced Port Scanner",
+          "SharpShares",
+          "SoftPerfect NetScan",
+          "PsExec",
+          "Powercat",
+          "Proxychains",
+          "Certipy",
+          "Impacket"
+        ],
+        "tool_matrices": [
+          "CredentialTheft",
+          "DiscoveryEnum",
+          "LOLBAS",
+          "Networking",
+          "Offsec",
+          "RMM-Tools"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Operação enxuta; chat minimalista com delegação aos *bosses*.",
+      "operational_continuity_en": "Lean operation; minimalist chat with *bosses* delegation."
+    },
+    "Hive": {
+      "rtm": {
+        "status": "tool_matrix",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [
+          "GMER",
+          "PCHunter",
+          "Advanced IP Scanner",
+          "Bloodhound",
+          "SoftPerfect NetScan",
+          "MEGA",
+          "PrivatLab",
+          "RClone",
+          "Sendspace",
+          "UFile"
+        ],
+        "tool_matrices": [
+          "DefenseEvasion",
+          "DiscoveryEnum",
+          "Exfiltration",
+          "LOLBAS",
+          "Offsec",
+          "RMM-Tools"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Supply-chain via MSP; chat recusa negociar com SMBs downstream.",
+      "operational_continuity_en": "Supply-chain via MSP; chat refuses downstream SMB negotiations."
+    },
+    "Hunters International": {
+      "rtm": {
+        "status": "tool_matrix",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [
+          "Advanced IP Scanner",
+          "Advanced Port Scanner",
+          "RClone",
+          "WinSCP"
+        ],
+        "tool_matrices": [
+          "DiscoveryEnum",
+          "Exfiltration"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "mapped",
+        "folder": "Hunters International",
+        "folder_url": "https://github.com/crocodyli/ThreatActors-TTPs/tree/main/Hunters%20International",
+        "ttp_url": "https://github.com/crocodyli/ThreatActors-TTPs/blob/main/Hunters%20International/Hunters%20International-TTP.md",
+        "cves_url": null,
+        "key_ttps": [
+          "T1190 — Acesso inicial via serviços expostos",
+          "T1486 — AES + double extortion",
+          "T1490 — Inibição de recovery/backup"
+        ],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Operação ultimato desde a intrusão; chat confirma inflexibilidade total.",
+      "operational_continuity_en": "Ultimatum operation from intrusion; chat confirms total inflexibility."
+    },
+    "lockbit3.0": {
+      "rtm": {
+        "status": "tool_matrix",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [
+          "Gosecretsdump",
+          "LaZagne",
+          "LostMyPassword",
+          "Mimikatz",
+          "NirSoft ExtPassword",
+          "PasswordFox",
+          "ProcDump",
+          "Veeam-Get-Creds",
+          "Backstab/Process Explorer driver (BYOVD)",
+          "Defender Control"
+        ],
+        "tool_matrices": [
+          "CredentialTheft",
+          "DefenseEvasion",
+          "DiscoveryEnum",
+          "Exfiltration",
+          "LOLBAS",
+          "Networking",
+          "Offsec",
+          "RMM-Tools"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "mapped",
+        "folder": "LockBit",
+        "folder_url": "https://github.com/crocodyli/ThreatActors-TTPs/tree/main/LockBit",
+        "ttp_url": "https://github.com/crocodyli/ThreatActors-TTPs/blob/main/LockBit/LockBit-TTP.md",
+        "cves_url": null,
+        "key_ttps": [
+          "T1190 — Exploração massiva de CVEs (Fortinet, Exchange, etc.)",
+          "T1219 — RMM e Cobalt Strike no precursor",
+          "T1486 — LockBit 3.0 builder / afiliados"
+        ],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Cobalt Strike/RMM massivos; chat reduz a *hello! pay for key!*.",
+      "operational_continuity_en": "Massive Cobalt Strike/RMM; chat reduces to *hello! pay for key!*."
+    },
+    "Mallox": {
+      "rtm": {
+        "status": "tool_matrix",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [
+          "Dropmefiles",
+          "File[.]io",
+          "Sendspace"
+        ],
+        "tool_matrices": [
+          "Exfiltration"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Dropmefiles/File.io; chat usa BOT com desconto % automático.",
+      "operational_continuity_en": "Dropmefiles/File.io; chat uses BOT with automatic % discount."
+    },
+    "mount-locker": {
+      "rtm": {
+        "status": "tool_matrix",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [
+          "MEGA"
+        ],
+        "tool_matrices": [
+          "Exfiltration"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Poucas tools catalogadas; chat usa framework legal como pressão.",
+      "operational_continuity_en": "Few catalogued tools; chat uses legal framework as pressure."
+    },
+    "Nightspire": {
+      "rtm": {
+        "status": "tool_matrix",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [
+          "Everything.exe",
+          "MEGA",
+          "WinSCP"
+        ],
+        "tool_matrices": [
+          "DiscoveryEnum",
+          "Exfiltration"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Exfiltração pré-lock; chat escala com OSINT de filings 10-K.",
+      "operational_continuity_en": "Pre-lock exfiltration; chat escalates with 10-K filing OSINT."
+    },
+    "NoEscape": {
+      "rtm": {
+        "status": "not_found",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [],
+        "tool_matrices": [],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Sem entrada RTM; chat formal com test decrypt via portal.",
+      "operational_continuity_en": "No RTM entry; formal chat with portal test decrypt."
+    },
+    "Pear": {
+      "rtm": {
+        "status": "not_found",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [],
+        "tool_matrices": [],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Sem entrada RTM/crocodyli; chat com contrato numerado (a–e).",
+      "operational_continuity_en": "No RTM/crocodyli entry; chat with numbered contract (a–e)."
+    },
+    "Qilin": {
+      "rtm": {
+        "status": "group_profile+matrix",
+        "group_profile": "Qilin",
+        "group_profile_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/GroupProfiles/Qilin.md",
+        "key_tools": [
+          "Nmap",
+          "ScreenConnect",
+          "EDRSandBlast",
+          "Mimikatz",
+          "Cobalt Strike",
+          "Proxychains",
+          "fsutil",
+          "EasyUpload",
+          "Nping",
+          "PCHunter"
+        ],
+        "tool_matrices": [
+          "CredentialTheft",
+          "DefenseEvasion",
+          "DiscoveryEnum",
+          "Exfiltration",
+          "LOLBAS",
+          "Networking",
+          "Offsec",
+          "RMM-Tools"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "EasyUpload.io e perfil RTM; chat estilo Akira-like com 7 entregáveis.",
+      "operational_continuity_en": "EasyUpload.io and RTM profile; Akira-like chat with 7 deliverables."
+    },
+    "RansomHub": {
+      "rtm": {
+        "status": "tool_matrix",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [
+          "Mimikatz",
+          "BadRentdrv2",
+          "ThreatFire System Monitor driver (BYOVD)",
+          "Angry IP Scanner",
+          "Nmap",
+          "SoftPerfect NetScan",
+          "WKTools",
+          "PSCP",
+          "RClone",
+          "WinSCP"
+        ],
+        "tool_matrices": [
+          "CredentialTheft",
+          "DefenseEvasion",
+          "DiscoveryEnum",
+          "Exfiltration",
+          "LOLBAS",
+          "Networking",
+          "Offsec",
+          "RMM-Tools"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "mapped",
+        "folder": "RansomHub",
+        "folder_url": "https://github.com/crocodyli/ThreatActors-TTPs/tree/main/RansomHub",
+        "ttp_url": "https://github.com/crocodyli/ThreatActors-TTPs/blob/main/RansomHub/RansomHub-TTP.md",
+        "cves_url": null,
+        "key_ttps": [
+          "T1190 — Initial access via afiliados",
+          "T1219 — RMM comum no kill chain",
+          "T1486 — Modelo RaaS com leak site"
+        ],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "RMM comum no precursor; chat é FAQ template automatizado.",
+      "operational_continuity_en": "RMM common in precursor; chat is automated FAQ template."
+    },
+    "Ranzy": {
+      "rtm": {
+        "status": "tool_matrix",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [
+          "UFile"
+        ],
+        "tool_matrices": [
+          "Exfiltration"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Operação smash-and-grab; chat fixa $7K sem double extortion.",
+      "operational_continuity_en": "Smash-and-grab operation; chat fixes $7K without double extortion."
+    },
+    "REvil": {
+      "rtm": {
+        "status": "tool_matrix",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [
+          "AdFind",
+          "Bloodhound",
+          "PrivatLab",
+          "RClone",
+          "Sendspace",
+          "BITSAdmin",
+          "Cobalt Strike"
+        ],
+        "tool_matrices": [
+          "DiscoveryEnum",
+          "Exfiltration",
+          "LOLBAS",
+          "Offsec"
+        ],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix",
+        "checklist_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix/blob/main/RTM_ThreatHunt_Checklist.csv"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Exfil tools variados; chat condescendente com docs roubados.",
+      "operational_continuity_en": "Varied exfil tools; condescending chat with stolen documents."
+    },
+    "RunSomeWares": {
+      "rtm": {
+        "status": "not_found",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [],
+        "tool_matrices": [],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "OSINT de receita na intrusão; chat cooperativo se vítima engaja.",
+      "operational_continuity_en": "Revenue OSINT during intrusion; cooperative chat when victim engages."
+    },
+    "trinity": {
+      "rtm": {
+        "status": "not_found",
+        "group_profile": null,
+        "group_profile_url": null,
+        "key_tools": [],
+        "tool_matrices": [],
+        "repo_url": "https://github.com/BushidoUK/Ransomware-Tool-Matrix"
+      },
+      "crocodyli": {
+        "status": "not_found",
+        "folder": null,
+        "folder_url": null,
+        "ttp_url": null,
+        "cves_url": null,
+        "key_ttps": [],
+        "repo_url": "https://github.com/crocodyli/ThreatActors-TTPs"
+      },
+      "operational_continuity_pt": "Minimalismo operacional; chat cobra por endpoint sem flexibilidade.",
+      "operational_continuity_en": "Operational minimalism; per-endpoint pricing chat with no flexibility."
+    }
+  }
+}
